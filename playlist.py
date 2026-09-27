@@ -1,7 +1,6 @@
 import requests
 
 def generate_playlist():
-    # Menggunakan endpoint API gizmott yang terekam di network untuk mengambil daftar channel
     url = "https://api.gizmott.com/api/v2/home"
     headers = {
         "accept": "application/json, text/plain, */*",
@@ -16,19 +15,22 @@ def generate_playlist():
         
         m3u_content = "#EXTM3U\n"
         
-        # Parsing data channel (Struktur disesuaikan dengan respons API gizmott)
-        # Jika data berupa list kategori/channel:
-        channels = data.get("channels", []) # Sesuaikan key JSON API jika diperlukan
-        
-        for ch in channels:
-            name = ch.get("channel_name", "Unknown")
-            logo = ch.get("channel_image", "")
-            stream_url = ch.get("stream_url", "")
-            group = ch.get("genre", "Sports")
-            
-            if stream_url:
-                m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
-                m3u_content += f'{stream_url}\n'
+        # Sesuai struktur standar API Gizmott, data home biasanya berisi section/list
+        sections = data.get("data", [])
+        if not sections and isinstance(data, list):
+            sections = data
+
+        for section in sections:
+            channels = section.get("channels", [])
+            for ch in channels:
+                name = ch.get("channel_name", "Unknown")
+                logo = ch.get("channel_image", "")
+                stream_url = ch.get("stream_url", "")
+                group = ch.get("genre_name", "Sports")
+                
+                if stream_url:
+                    m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
+                    m3u_content += f'{stream_url}\n'
                 
         with open("playlist.m3u", "w", encoding="utf-8") as f:
             f.write(m3u_content)
