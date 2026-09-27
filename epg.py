@@ -1,5 +1,4 @@
 import requests
-from datetime import datetime
 
 def generate_epg():
     url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
@@ -12,12 +11,15 @@ def generate_epg():
     
     try:
         response = requests.get(url, headers=headers)
-        schedules = response.json()
+        data = response.json()
         
         xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
         
-        # Looping data schedule dari API untuk dimasukkan ke XMLTV
-        # (Struktur tag disesuaikan dengan format XMLTV standar)
+        # Ambil list jadwal dari respons API
+        schedules = data.get("data", [])
+        if not schedules and isinstance(data, list):
+            schedules = data
+
         for item in schedules:
             title = item.get("title", "Live Event")
             desc = item.get("description", "")
