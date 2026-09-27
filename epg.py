@@ -1,5 +1,5 @@
 import requests
-import os
+import json
 
 def generate_epg():
     url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
@@ -15,35 +15,34 @@ def generate_epg():
     try:
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
-            data = response.json()
-            # Cetak struktur data sementara untuk di-inspeksi di log GitHub Actions
-            print("API Response keys:", data.keys() if isinstance(data, dict) else type(data))
+            res_json = response.json()
+            data_field = res_json.get("data", [])
             
-            schedules = data.get("data", [])
-            if not schedules and isinstance(data, list):
-                schedules = data
-
-            if schedules:
+            # Cetak tipe data dan cuplikan isi 'data' ke log untuk diinspeksi
+            print(f"Tipe data 'data': {type(data_field)}")
+            print(f"Cuplikan isi: {str(data_field)[:300]}")
+            
+            if isinstance(data_field, list):
                 xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
-                for item in schedules:
-                    title = item.get("title", "Live Event")
-                    desc = item.get("description", "")
-                    start = item.get("start_time", "")
-                    stop = item.get("end_time", "")
-                    channel_id = item.get("channel_id", "channel")
-                    
-                    xml_content += f'  <programme start="{start}" stop="{stop}" channel="{channel_id}">\n'
-                    xml_content += f'    <title lang="en">{title}</title>\n'
-                    xml_content += f'    <desc lang="en">{desc}</desc>\n'
-                    xml_content += f'  </programme>\n'
+                for item in data_field:
+                    if isinstance(item, dict):
+                        title = item.get("title", "Live Event")
+                        desc = item.get("description", "")
+                        start = item.get("start_time", "")
+                        stop = item.get("end_time", "")
+                        channel_id = item.get("channel_id", "channel")
+                        
+                        xml_content += f'  <programme start="{start}" stop="{stop}" channel="{channel_id}">\n'
+                        xml_content += f'    <title lang="en">{title}</title>\n'
+                        xml_content += f'    <desc lang="en">{desc}</desc>\n'
+                        xml_content += f'  </programme>\n'
                 xml_content += '</tv>'
     except Exception as e:
-        print(f"Error fetching EPG: {e}")
+        print(f"Error parsing EPG: {e}")
         
-    # Pastikan file epg.xml selalu tercipta apa pun kondisinya agar git add tidak error
     with open("epg.xml", "w", encoding="utf-8") as f:
         f.write(xml_content)
-    print("EPG XMLTV file created successfully!")
+    print("EPG XMLTV file processed successfully!")
 
 if __name__ == "__main__":
     generate_epg()
