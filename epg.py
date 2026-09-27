@@ -4,94 +4,115 @@ import requests
 
 
 def generate_epg():
-  url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
-  headers = {
-      "accept": "application/json, text/plain, */*",
-      "access-token": (
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwicHViaWQiOiI1MDE4MyIsInVpZCI6Ijc5MzgxMTQiLCJjb3VudHJ5X2NvZGUiOiJJIDIsImRldmljZV90eXBlIjoid2ViIiwiaWF0IjoxNzkwNSExNDE1LCJleHAiOjE3OTgyODc0MTV9.3yF9I5p_Y7m2YZZ-bYQkTxkmzR_uFhCfPwVSALIDDdw"
-      ),
-      "pubid": "50183",
-      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
-  }
+    url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
 
-  try:
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-      res_json = response.json()
-      data_field = res_json.get("data", {})
-      schedules = data_field.get("schedules", [])
+    access_token = (
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwicHViaWQiOiI1MDE4MyIsInVpZCI6Ijc5MzgxMTQiLCJjb3VudHJ5X2NvZGUiOiJJIDIsImRldmljZV90eXBlIjoid2ViIiwiaWF0IjoxNzkwNSExNDE1LCJleHAiOjE3OTgyODc0MTV9.3yF9I5p_Y7m2YZZ-bYQkTxkmzR_uFhCfPwVSALIDDdw"
+    )
 
-      channels_map = {}
-      valid_programmes = []
+    headers = {
+        "accept": "application/json, text/plain, */*",
+        "access-token": access_token,
+        "pubid": "50183",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    }
 
-      if isinstance(schedules, list):
-        for item in schedules:
-          if isinstance(item, dict):
-            channel_id = str(item.get("channel_id", "channel"))
-            title = item.get("title", "Live Event")
-            desc = item.get("description", "")
+    try:
+        response = requests.get(url, headers=headers)
+        if response.status_code == 200:
+            res_json = response.json()
+            data_field = res_json.get("data", {})
+            schedules = data_field.get("schedules", [])
 
-            if not desc or desc.strip().lower() == "none":
-              desc = ""
+            channels_map = {}
+            valid_programmes = []
 
-            start = item.get("start", "")
-            stop = item.get("end", "")
+            if isinstance(schedules, list):
+                for item in schedules:
+                    if isinstance(item, dict):
+                        channel_id = str(item.get("channel_id", "channel"))
+                        title = item.get("title", "Live Event")
+                        desc = item.get("description", "")
 
-            try:
-              dt_start = datetime.fromisoformat(start.replace("Z", "+00:00"))
-              dt_stop = datetime.fromisoformat(stop.replace("Z", "+00:00"))
+                        if not desc or desc.strip().lower() == "none":
+                            desc = ""
 
-              if dt_stop <= dt_start:
-                continue
+                        start = item.get("start", "")
+                        stop = item.get("end", "")
 
-              start_fmt = dt_start.strftime("%Y%m%d%H%M%S %z")
-              stop_fmt = dt_stop.strftime("%Y%m%d%H%M%S %z")
-            except Exception:
-              start_fmt = start
-              stop_fmt = stop
+                        try:
+                            dt_start = datetime.fromisoformat(
+                                start.replace("Z", "+00:00")
+                            )
+                            dt_stop = datetime.fromisoformat(
+                                stop.replace("Z", "+00:00")
+                            )
 
-            if channel_id not in channels_map:
-              channel_name = (
-                  item.get("channel_name")
-                  or item.get("name")
-                  or f"Channel {channel_id}"
-              )
-              channels_map[channel_id] = channel_name
+                            if dt_stop <= dt_start:
+                                continue
 
-            valid_programmes.append({
-                "channel": channel_id,
-                "start": start_fmt,
-                "stop": stop_fmt,
-                "title": html.escape(title),
-                "desc": html.escape(desc),
-            })
+                            start_fmt = dt_start.strftime(
+                                "%Y%m%d%H%M%S %z"
+                            ).strip()
+                            stop_fmt = dt_stop.strftime(
+                                "%Y%m%d%H%M%S %z"
+                            ).strip()
+                        except Exception:
+                            start_fmt = start
+                            stop_fmt = stop
 
-        xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', "<tv>"]
+                        if channel_id not in channels_map:
+                            channel_name = (
+                                item.get("channel_name")
+                                or item.get("name")
+                                or f"Channel {channel_id}"
+                            )
+                            channels_map[channel_id] = channel_name
 
-        for ch_id, ch_name in channels_map.items():
-          xml_lines.append(f'  <channel id="{ch_id}">\n    <display-name lang="en">{html.escape(ch_name)}</display-name>\n  </channel>')
+                        valid_programmes.append({
+                            "channel": channel_id,
+                            "start": start_fmt,
+                            "stop": stop_fmt,
+                            "title": html.escape(title),
+                            "desc": html.escape(desc),
+                        })
 
-        for prog in valid_programmes:
-          xml_lines.append(
-              f'  <programme start="{prog["start"]}" stop="{prog["stop"]}"'
-              f' channel="{prog["channel"]}">\n    <title'
-              f' lang="en">{prog["title"]}</title>\n    <desc'
-              f' lang="en">{prog["desc"]}</desc>\n  </programme>'
-          )
+                xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', "<tv>"]
 
-        xml_lines.append("</tv>")
-        xml_content = "\n".join(xml_lines)
+                for ch_id, ch_name in channels_map.items():
+                    xml_lines.append(
+                        f'  <channel id="{ch_id}">\n    <display-name lang="en">{html.escape(ch_name)}</display-name>\n  </channel>'
+                    )
 
-        with open("epg.xml", "w", encoding="utf-8") as f:
-          f.write(xml_content)
-        print("EPG XMLTV file successfully generated and optimized!")
-      else:
-        print("The schedule data format in the API is invalid.")
-    else:
-      print(f"Failed to retrieve data from the API, status code: {response.status_code}")
-  except Exception as e:
-    print(f"Error creating EPG: {e}")
+                for prog in valid_programmes:
+                    prog_lines = [
+                        f'  <programme start="{prog["start"]}" stop="{prog["stop"]}" channel="{prog["channel"]}">',
+                        f'    <title lang="en">{prog["title"]}</title>',
+                    ]
+                    if prog["desc"]:
+                        prog_lines.append(
+                            f'    <desc lang="en">{prog["desc"]}</desc>'
+                        )
+
+                    prog_lines.append("  </programme>")
+                    xml_lines.append("\n".join(prog_lines))
+
+                xml_lines.append("</tv>")
+                
+                xml_content = "\n".join(xml_lines)
+
+                with open("epg.xml", "w", encoding="utf-8") as f:
+                    f.write(xml_content)
+                print("EPG XMLTV file successfully generated and optimized!")
+            else:
+                print("The schedule data format in the API is invalid.")
+        else:
+            print(
+                f"Failed to retrieve data from the API, status code: {response.status_code}"
+            )
+    except Exception as e:
+        print(f"Error creating EPG: {e}")
 
 
 if __name__ == "__main__":
-  generate_epg()
+    generate_epg()
