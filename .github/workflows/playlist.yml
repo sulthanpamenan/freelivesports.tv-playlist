@@ -1,0 +1,35 @@
+name: FLS Playlist
+
+on:
+  repository_dispatch:
+    types: [run-playlist]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run Playlist Generator
+        run: python playlist.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add playlist.m3u
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto refresh FLS Playlist [skip ci]" && git pull --rebase origin main && git push)
