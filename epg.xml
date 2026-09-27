@@ -369,10 +369,6 @@
   <channel id="2028">
     <display-name lang="en">Channel 2028</display-name>
   </channel>
-  <programme start="20260927233000" stop="20260928000000" channel="2191">
-    <title lang="en">Asian Games 2026 Highlights</title>
-    <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
-  </programme>
   <programme start="20260928000000" stop="20260928030000" channel="2191">
     <title lang="en">Asian Games 2026 Highlights</title>
     <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
@@ -477,7 +473,7 @@
     <title lang="en">Asian Games 2026 Highlights</title>
     <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928011500" channel="2192">
+  <programme start="20260928000000" stop="20260928011500" channel="2192">
     <title lang="en">Asian Games 2026 Highlights</title>
     <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
   </programme>
@@ -573,7 +569,7 @@
     <title lang="en">Asian Games 2026 Highlights</title>
     <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928011500" channel="2193">
+  <programme start="20260928000000" stop="20260928011500" channel="2193">
     <title lang="en">Asian Games 2026 Highlights</title>
     <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
   </programme>
@@ -669,11 +665,7 @@
     <title lang="en">Asian Games 2026 Highlights</title>
     <desc lang="en">Highlights, features and replay coverage from the 2026 Asian Games, between live sessions.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233900" channel="2050">
-    <title lang="en">NASCAR Classics: Cup Series</title>
-    <desc lang="en">Relive the 2023 Hollywood Casino 400 at Kansas Speedway in this NASCAR Cup Series race replay.</desc>
-  </programme>
-  <programme start="20260927233900" stop="20260928000500" channel="2050">
+  <programme start="20260928000000" stop="20260928000500" channel="2050">
     <title lang="en">Beyond The Wheel</title>
     <desc lang="en">Beyond the Wheel goes behind-the-scenes for the 2006 fall race at Kansas.</desc>
   </programme>
@@ -784,10 +776,6 @@
   <programme start="20260929231500" stop="20260930015800" channel="2050">
     <title lang="en">NASCAR Classics: Cup Series</title>
     <desc lang="en">Relive the 2025 Toyota Save Mart 350 at Sonoma Raceway in this NASCAR Cup Series race replay</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2066">
-    <title lang="en">SI Fantasy Football Live</title>
-    <desc lang="en">The Sports Illustrated team takes a look at the top fantasy picks</desc>
   </programme>
   <programme start="20260928000000" stop="20260928020000" channel="2066">
     <title lang="en">Volleyball: Howard v Morgan State</title>
@@ -981,9 +969,9 @@
     <title lang="en">SI Covers - Jalen Brunson, Wemby</title>
     <desc lang="en">Jalen Brunson revisits moments that shaped his basketball journey on his way to becoming an NBA Finals MVP.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2003">
-    <title lang="en">Aces: The ATP No. 1 Club</title>
-    <desc lang="en">Discover the pioneers who built modern tennis before the roadmap existed, proving No. 1 took more than talent.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="2066">
+    <title lang="en">SI Covers - Will Anderson Jr.</title>
+    <desc lang="en">Inside the Life of the NFL&#x27;s Highest-Paid Non-QB, Will Anderson. September 2026 Cover Story.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="2003">
     <title lang="en">Aces: The ATP No. 1 Club</title>
@@ -1061,7 +1049,11 @@
     <title lang="en">Hangzhou-ATP</title>
     <desc lang="en">Encore coverage of Hangzhou 2026</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928040000" channel="2008">
+  <programme start="20260929233000" stop="20260930000000" channel="2003">
+    <title lang="en">WTA All Access</title>
+    <desc lang="en">Watch and listen to the top WTA players in this behind the scenes look at the WTA Tour</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928040000" channel="2008">
     <title lang="en">Billie Jean King Cup Finals</title>
     <desc lang="en">Encore coverage from the Billie Jean King Cup Finals 2026</desc>
   </programme>
@@ -1117,11 +1109,7 @@
     <title lang="en">Live Porto ATP Challenger</title>
     <desc lang="en">Live coverage from the ATP Challenger Porto 2026</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234600" channel="2117">
-    <title lang="en">Absinthe TV - Untitled Program</title>
-    <desc lang="en">Absinthe TV - Untitled Program on Absinthe TV</desc>
-  </programme>
-  <programme start="20260927234600" stop="20260928004500" channel="2117">
+  <programme start="20260928000000" stop="20260928004500" channel="2117">
     <title lang="en">Fight Network - IMPACT in 60</title>
     <desc lang="en">Fight Network - IMPACT in 60 on Fight Network</desc>
   </programme>
@@ -1329,7 +1317,11 @@
     <title lang="en">GoLive Sports Cast - MASLW: Omaha Queens vs Tulsa FC</title>
     <desc lang="en">GoLive Sports Cast - MASLW: Omaha Queens vs Tulsa FC on GoLive Sports Cast</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928012100" channel="2026">
+  <programme start="20260929233700" stop="20260930004600" channel="2117">
+    <title lang="en">GoLive Sports Cast - WMF 2025 Baku - Hungary vs Turkiye</title>
+    <desc lang="en">GoLive Sports Cast - WMF 2025 Baku - Hungary vs Turkiye on GoLive Sports Cast</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928012100" channel="2026">
     <title lang="en">PSA Squash Tour</title>
     <desc lang="en">Mohamad Zakaria faces Joel Makin in the PSA New Zealand Open 2026 semi-final in Christchurch, NZ</desc>
   </programme>
@@ -1433,7 +1425,7 @@
     <title lang="en">Major Arena Soccer League</title>
     <desc lang="en">Baltimore Blast face Milwaukee Wave in the Major Arena Soccer League semi-final</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928011100" channel="2025">
+  <programme start="20260928000000" stop="20260928011100" channel="2025">
     <title lang="en">Major Arena Soccer League</title>
     <desc lang="en">Milwaukee Wave face San Diego Sockers in Game 3 of the 2026 Ron Newman Cup Finals</desc>
   </programme>
@@ -1581,7 +1573,7 @@
     <title lang="en">Intennse</title>
     <desc lang="en">Intense tennis action unfolds in this thrilling match</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928001400" channel="2019">
+  <programme start="20260928000000" stop="20260928001400" channel="2019">
     <title lang="en">SHOCKING END TO OT7 CHAMPIONSHIPS! Part 1</title>
     <desc lang="en">It&#x27;s the OT7 Championship! We crown a final winner of the OT7 Circuit with Deestroying, Bunchie &amp; More! (Part 1)</desc>
   </programme>
@@ -1669,7 +1661,7 @@
     <title lang="en">SUPERTEAM: Prolific Prep Part 2!</title>
     <desc lang="en">Part 2 of the Superteam series starring Jalen Green and Prolific Prep</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000300" channel="2009">
+  <programme start="20260928000000" stop="20260928000300" channel="2009">
     <title lang="en">Poker Go: 2021 Poker Masters 102: Episode 2</title>
     <desc lang="en">The best Poker players from around the world face off for the ultimate prize in the 2021 Poker Masters!</desc>
   </programme>
@@ -1857,7 +1849,7 @@
     <title lang="en">Don, Hahn &amp; Rosenberg (LIVE)</title>
     <desc lang="en">Don, Hahn &amp; Rosenberg (LIVE)</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010000" channel="1983">
+  <programme start="20260928000000" stop="20260928010000" channel="1983">
     <title lang="en">Billiard TV</title>
     <desc lang="en">Billiard TV is your go-to network for everything billiards. Watch your favorite players from all over the world compete on the biggest billiards stage!</desc>
   </programme>
@@ -1952,10 +1944,6 @@
   <programme start="20260929230000" stop="20260930010000" channel="1983">
     <title lang="en">Billiard TV</title>
     <desc lang="en">Billiard TV is your go-to network for everything billiards. Watch your favorite players from all over the world compete on the biggest billiards stage!</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2016">
-    <title lang="en">Cricket Highlights</title>
-    <desc lang="en">Highlights of the first ODI fixture between England and India.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="2016">
     <title lang="en">Cricket Highlights</title>
@@ -2155,7 +2143,7 @@
     <title lang="en">Cricket Highlights</title>
     <desc lang="en">Cricket action and highlights from around the world.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928004700" channel="2018">
+  <programme start="20260928000000" stop="20260928004700" channel="2018">
     <title lang="en">All the goals</title>
     <desc lang="en">All the goals of FC Barcelona at 202526 Season</desc>
   </programme>
@@ -2295,7 +2283,7 @@
     <title lang="en">UEFA Champions League</title>
     <desc lang="en">Enjoy the best highlights of all the 200506 Champions League competition</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928013400" channel="2116">
+  <programme start="20260928000000" stop="20260928013400" channel="2116">
     <title lang="en">FC Copenhagen v City: Full-match replay</title>
     <desc lang="en">The full 90 minutes from our trip to the Danish capital.</desc>
   </programme>
@@ -2543,11 +2531,7 @@
     <title lang="en">City v Feyenoord: Full Match Replay 2024/25 Group Stages</title>
     <desc lang="en">CITY+ subscribers can watch the full 90 minutes from City&#x27;s Champions League clash with Feyenoord at the Etihad Stadium...</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234700" channel="2020">
-    <title lang="en">Sunshine Day</title>
-    <desc lang="en">TNT alongside Jet and his daughter realize just how precious the simple things are on the shores of Sebago Lake. TNT and Torch reminisce on their early days of blazing the trail for a new generation of female Globetrotters. And TNT doesn&#x27;t look twice as she sinks an amazing shot in New York&#x27;s famous Rucker Park. Kenny Smith Hosts.</desc>
-  </programme>
-  <programme start="20260927234700" stop="20260928001400" channel="2020">
+  <programme start="20260928000000" stop="20260928001400" channel="2020">
     <title lang="en">Trick Shots &amp; Tea Parties</title>
     <desc lang="en">Wham, Cheese and Hammer learn about the construction industry; Torch, Hammer, and Hot Shot head to Broward, Florida, to meet The Embrace Girls Foundation; a nonprofit encouraging at-risk girls and uplifting tea parties.; Thunder throwback to his trick shot gauntlet at an abandoned warehouse.; Torch, Hammer, Wham, and Hot Shot take an unforgettable journey to Australia. Hosted by Craig Robinson.</desc>
   </programme>
@@ -2839,7 +2823,11 @@
     <title lang="en">Swimming With Whale Sharks</title>
     <desc lang="en">Bulldog, Wham, and TNT join wounded veterans for an extraordinary encounter with whale sharks in Atlanta. Torch and Jet get in the groove as they join a special art education program to remix the Globetrotter theme song. Cheese heads home to the Bronx to revisit his roots. Hosted by Craig Robinson.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928020200" channel="2069">
+  <programme start="20260929233600" stop="20260930000300" channel="2020">
+    <title lang="en">Brotherly Love</title>
+    <desc lang="en">Speedy invites Thunder and Bulldog to his hometown of Philadelphia to give back to a barber known for providing haircuts to the homeless. Jet and Coach Lou tell the history of the Globetrotter&#x27;s storied rivals, the Washington Generals. And Speedy hits the famous courts of Harlem&#x27;s Rucker Park to break down a one-of-a-kind trick shot. Kenny Smith hosts.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928020200" channel="2069">
     <title lang="en">Cincinnati vs. Arizona (11.15.25) Football Full Game Replay</title>
     <desc lang="en">Watch Cincinnati challenge Arizona in this Big 12 battle</desc>
   </programme>
@@ -2935,10 +2923,6 @@
     <title lang="en">Texas Tech vs. TCU Football 10.29.16</title>
     <desc lang="en">Texas Tech Red Raiders fought in this 2016 matchup vs. TCU Horned Frogs</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2068">
-    <title lang="en">Louisville vs. Clemson (11.2.24) Football Replay</title>
-    <desc lang="en">The Cardinals look to knock off the Tigers as the 2024 season winds down.</desc>
-  </programme>
   <programme start="20260928000000" stop="20260928023000" channel="2068">
     <title lang="en">Virginia vs. Miami (10.28.23) Football Replay</title>
     <desc lang="en">The second-straight OT victory in a row for Miami came against the Cavaliers.</desc>
@@ -3006,10 +2990,6 @@
   <programme start="20260929210000" stop="20260930000000" channel="2068">
     <title lang="en">Notre Dame vs. North Carolina (11.27.20) Football Replay</title>
     <desc lang="en">The Irish looked to stay unbeaten in 2020.</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2067">
-    <title lang="en">Football Encore - 1987 Rose Bowl: Arizona State vs. Michigan (1/1/87)</title>
-    <desc lang="en">Arizona State quarterback Jeff Van Raaphorst was named the Player of the Game, as ASU beats Michigan 22-15</desc>
   </programme>
   <programme start="20260928000000" stop="20260928020000" channel="2067">
     <title lang="en">Football Encore - 2012 Rose Bowl: Oregon vs. Wisconsin (1/2/12)</title>
@@ -3087,7 +3067,7 @@
     <title lang="en">Football - Sacramento State vs. Fresno State (9/12/26)</title>
     <desc lang="en">Jayden Mandal two (2) TDs, Bryson Donelson three (3) rushing TDs as Fresno State routes Sacramento State 49-3</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010000" channel="2194">
+  <programme start="20260928000000" stop="20260928010000" channel="2194">
     <title lang="en">SWAC TV</title>
     <desc lang="en">Welcome to the ultimate home for Southwestern Athletic Conference sports! From thrilling football and basketball to volleyball, track &amp; field, and more, experience it all, free on SWAC TV!</desc>
   </programme>
@@ -3183,7 +3163,7 @@
     <title lang="en">SWAC TV</title>
     <desc lang="en">Welcome to the ultimate home for Southwestern Athletic Conference sports! From thrilling football and basketball to volleyball, track &amp; field, and more, experience it all, free on SWAC TV!</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000300" channel="2036">
+  <programme start="20260928000000" stop="20260928000300" channel="2036">
     <title lang="en">PFL in 60 - 2026 PFL San Diego</title>
     <desc lang="en">PFL San Diego featured California standout AJ McKee vs. undefeated Salamat Isbulaev in the featherweight main event, plus former PFL champion Liz Carmouche taking on Viviane Araujo in the co-main event.</desc>
   </programme>
@@ -3323,7 +3303,11 @@
     <title lang="en">PFL in 60 - 2025 World Tournament 1</title>
     <desc lang="en">PFL in 60 - 2025 World Tournament 1</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010000" channel="2035">
+  <programme start="20260929233400" stop="20260930000400" channel="2036">
+    <title lang="en">Full Fight: Gaethje v. Firmino</title>
+    <desc lang="en">In the WSOFNYC main event, undefeated lightweight kingpin Justin The Highlight Gaethje (16-0) defends his crown against Luiz Buscape Firmino (19-7). WSOFNYC featured an unprecedented New Years Eve world championship extravaganza at The Theater at Madison Square Garden in New York City.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928010000" channel="2035">
     <title lang="en">iMPACT!</title>
     <desc lang="en">Two World Championships are on the line in this landmark edition of Thursday Night iMPACT!</desc>
   </programme>
@@ -3431,11 +3415,7 @@
     <title lang="en">TNA Bound For Glory 2007</title>
     <desc lang="en">October 14, 2007. Sting challenges Kurt Angle for the TNA World Heavyweight Championship, and Samoa Joe battles Christian with Matt Morgan as the special ringside enforcer plus the first ever Knockouts champion is crowned from Atlanta, GA..</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235200" channel="2041">
-    <title lang="en">Short Track Super Series</title>
-    <desc lang="en">Short Track Super Series charges into Port Royal Speedway for Big Block Modified dirt action.</desc>
-  </programme>
-  <programme start="20260927235200" stop="20260928005500" channel="2041">
+  <programme start="20260928000000" stop="20260928005500" channel="2041">
     <title lang="en">Speed Queens</title>
     <desc lang="en">Speed Queens tells the Enders sisters’ NHRA story.</desc>
   </programme>
@@ -3599,7 +3579,7 @@
     <title lang="en">Legends of Racing</title>
     <desc lang="en">Bryan Clauson’s Chasing 200 explores his life, career, and legacy.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928074900" channel="2047">
+  <programme start="20260928000000" stop="20260928074900" channel="2047">
     <title lang="en">Goodwood Festival of Speed</title>
     <desc lang="en">Shootout day crowns the fastest car and driver. Celebrations for Damon Hill&#x27;s 30-year Formula One championship milestone.</desc>
   </programme>
@@ -3811,7 +3791,7 @@
     <title lang="en">Phil Hill Cup</title>
     <desc lang="en">GT40s, Shelby Cobras and Ferraris ignite a 20-minute flat-out sprint honoring America&#x27;s first F1 World Champion.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928011800" channel="2007">
+  <programme start="20260928000000" stop="20260928011800" channel="2007">
     <title lang="en">Djokovic v Thiem - Monte-Carlo 2018 Round 3</title>
     <desc lang="en">Novak Djokovic took on fifth seed Dominic Thiem in a blockbuster third round showdown in Monte-Carlo.</desc>
   </programme>
@@ -3883,7 +3863,7 @@
     <title lang="en">Djokovic v Nadal - Bejing 2015 Final</title>
     <desc lang="en">Relive the 2015 final in Beijing as Novak Djokovic and Rafael Nadal went head-to-head for the title.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928003000" channel="2004">
+  <programme start="20260928000000" stop="20260928003000" channel="2004">
     <title lang="en">PPA Tour Pickleball</title>
     <desc lang="en">Pickleball coverage from PPA Tour: Atlanta Slam</desc>
   </programme>
@@ -4067,7 +4047,7 @@
     <title lang="en">Major League Pickleball</title>
     <desc lang="en">Pickleball coverage from MLP Grand Rapids 2026</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928001100" channel="2002">
+  <programme start="20260928000000" stop="20260928001100" channel="2002">
     <title lang="en">ACTION: Red Bull Soapbox Race – 50 Genius Designs</title>
     <desc lang="en">Laugh along with our edit of 50 of the most genius designs from the insane Red Bull Soapbox Race 2014-2025.</desc>
   </programme>
@@ -4371,11 +4351,7 @@
     <title lang="en">BIKE: Encouraged: Building the Future – BMX in Lagos</title>
     <desc lang="en">Courage Adams returns to Nigeria to give local BMX riders a chance to change the sport in their community.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234200" channel="2001">
-    <title lang="en">And Two If By Sea - rivalidad de gemelos en el surf</title>
-    <desc lang="en">Los gemelos CJ y Damien Hobgood enfrentan una rivalidad en el surf profesional mientras buscan diferenciarse y construir su propio camino dentro del mismo deporte.</desc>
-  </programme>
-  <programme start="20260927234200" stop="20260928010800" channel="2001">
+  <programme start="20260928000000" stop="20260928010800" channel="2001">
     <title lang="en">La leyenda del rally con ocho títulos mundiales</title>
     <desc lang="en">Sébastien Ogier se despide del rally ganando su octavo y último título mundial, cerrando una carrera legendaria con una temporada final llena de maestría y determinación.</desc>
   </programme>
@@ -4539,15 +4515,11 @@
     <title lang="en">El ABC de Mountain Biking - Todo lo que necesitas saber</title>
     <desc lang="en">Descubre todo lo esencial sobre el mountain biking. Adéntrate en su historia, terminología y los héroes que han marcado este deporte, para entender y disfrutar al máximo del mundo del MTB.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234200" channel="2000">
-    <title lang="en">ACTION: Red Bull Soapbox Race – Crazy Obstacle Courses</title>
-    <desc lang="en">Watch daring drivers in wild four-wheeled cars crash and race in nonstop action on the road to victory!</desc>
+  <programme start="20260929235700" stop="20260930002700" channel="2001">
+    <title lang="en">El ABC del Kayaking - Conoce todo de este deporte</title>
+    <desc lang="en">Jessica Fox recorre la historia del piragüismo para descubrir sus orígenes y conocer a los atletas que ayudaron a transformar este deporte hasta convertirlo en un referente mundial.</desc>
   </programme>
-  <programme start="20260927234200" stop="20260927235600" channel="2000">
-    <title lang="en">ACTION: Red Bull Soapbox Race – Crazy Obstacle Courses</title>
-    <desc lang="en">Want to win over a crowd? Destroy your homemade racer and the course itself, a crowd favourite!</desc>
-  </programme>
-  <programme start="20260927235600" stop="20260928001000" channel="2000">
+  <programme start="20260928000000" stop="20260928001000" channel="2000">
     <title lang="en">ACTION: Red Bull Soapbox Race – Crazy Obstacle Courses</title>
     <desc lang="en">A brilliant transformer design, top-notch dancing dads and a flaming witch going down in a blaze of glory won the crowds&#x27; hearts in 2019.</desc>
   </programme>
@@ -4919,11 +4891,7 @@
     <title lang="en">ACTION: Red Bull Soapbox Race – Crazy Obstacle Courses</title>
     <desc lang="en">High-speed antics in Melbourne see homemade creations race to the finish line with big crashes and crazy fun.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234500" channel="1999">
-    <title lang="en">RED BULL CLIFF DIVING: Denmark 2026</title>
-    <desc lang="en">Back in Copenhagen for the sixth time, the series takes over the Opera House roof with stunning city views.</desc>
-  </programme>
-  <programme start="20260927234500" stop="20260928015100" channel="1999">
+  <programme start="20260928000000" stop="20260928015100" channel="1999">
     <title lang="en">RED BULL CLIFF DIVING: Mostar 2026</title>
     <desc lang="en">The world’s top cliff divers leap from Mostar’s Stari Most bridge into Neretva River&#x27;s emerald waters.</desc>
   </programme>
@@ -5151,11 +5119,7 @@
     <title lang="en">SURF: Inside Pro Surfing – Behind the Break</title>
     <desc lang="en">Go behind the scenes as the WSL Finals Fiji crowns surfing&#x27;s 2025 world champions.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235300" channel="2115">
-    <title lang="en">Red Bull Seifenkistenrennen: Top 50 Runs</title>
-    <desc lang="en">Selbstgebaute Rennwagen, steile Kurse und jede Menge Hindernisse: Beim Red Bull Seifenkistenrennen wird Tempo mit Chaos kombiniert. Die 50 schnellsten und furchtlosesten Runs des Kultformats.</desc>
-  </programme>
-  <programme start="20260927235300" stop="20260928004400" channel="2115">
+  <programme start="20260928000000" stop="20260928004400" channel="2115">
     <title lang="en">Red Bull Seifenkistenrennen - S11 E2</title>
     <desc lang="en">In Melbourne sorgt das Red Bull Seifenkistenrennen für Ausnahmezustand: Kreative Teams schicken ihre verrückten Konstruktionen ins Rennen – mit Action, Humor und jeder Menge Chaos Down Under.</desc>
   </programme>
@@ -5471,9 +5435,9 @@
     <title lang="en">Premier Padel 2025 Italien Major - Highlights</title>
     <desc lang="en">Padel-Action im Foro Italico: Die Highlights des Italien Major in Rom zeigen die besten Ballwechsel, enge Duelle und die entscheidenden Punkte des Turniers.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1996">
-    <title lang="en">S5E1 Water</title>
-    <desc lang="en">The very best of GoPro Water sports including your favourites Surfing, kayaking, wakeboarding and more!</desc>
+  <programme start="20260929235500" stop="20260930002400" channel="2115">
+    <title lang="en">Premier Padel 2025 Qatar Major - Highlights</title>
+    <desc lang="en">Der erste Major der Saison bringt Top-Teams nach Doha. Spektakuläre Ballwechsel, intensive Matches und große Emotionen prägen das Highlight-Event im Khalifa International Complex.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="1996">
     <title lang="en">S1E1 Moto</title>
@@ -5859,7 +5823,11 @@ This episode features Olympic bronze medalist Kristian Ipsen, American rugby uni
     <title lang="en">S1E3 Two Roads</title>
     <desc lang="en">“Two Roads” is an original GoPro series that follows nine athletes and one coach who have committed themselves to the relentless pursuit of greatness. Each episode dives deep into an athlete’s unique journey, revealing the life-changing moments that shaped the path they walk today. This episode features Paul Rabil, legendary professional lacrosse player and co-founder of the Premier Lacrosse League, celebrated as one of the greatest in the sport’s history. Also featured is Britney Henry, a standout track and field athlete from the University of Oregon who captured the Pac-10 Conference title in the hammer throw. Rounding out the episode is Meagan Martin, trailblazing competitor as the first female rookie to complete the American Ninja Warrior course and the first-ever Women’s Champion of the series.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928030000" channel="1998">
+  <programme start="20260929233000" stop="20260930000000" channel="1996">
+    <title lang="en">S1E1 Draft Story</title>
+    <desc lang="en">In Part 1, we uncover the story of Tyvis Powell and the people who shaped him into the man and football player he is today. His road to the NFL was anything but easy, and it nearly never happened without the guidance of his mentor, Sean Williams. A Draft Story is a GoPro Original Production that follows Ohio State safety Tyvis Powell as he makes the leap to professional football. Though he was not invited to Chicago for the 2016 NFL Draft, his journey is unforgettable. Witness the tension, hope, and emotion as Tyvis waits for the call that will change his life and etch the Powell name into NFL history. This is his Draft Story.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928030000" channel="1998">
     <title lang="en">Big Wednesday</title>
     <desc lang="en">The biggest waves and the gutsiest surfers from around the world</desc>
   </programme>
@@ -5978,10 +5946,6 @@ This episode features Olympic bronze medalist Kristian Ipsen, American rugby uni
   <programme start="20260929230000" stop="20260930071500" channel="1998">
     <title lang="en">2025 Trestles Pro Finals</title>
     <desc lang="en">Dora and Sakura Johnson claim victory at Lower Trestles in the CT&#x27;s first return to Lowers in eight years.</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1972">
-    <title lang="en">Hard Truths of Conservation</title>
-    <desc lang="en">In the remote Turkish mountains, host Dan Cabela looks at how regulated hunting of ibex has helped protect large areas for wildlife, and funds local conservation initiatives.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="1972">
     <title lang="en">Saltwater Experience</title>
@@ -6383,11 +6347,11 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Captain&#x27;s Log</title>
     <desc lang="en">The tide is right for Capt. Jonathan Moss to chase that Northeast Florida slam.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233300" channel="1980">
-    <title lang="en">Reel West Coast</title>
-    <desc lang="en">Brendan and Willie Mitchell fish out of Tofino Resort &amp; Marina for the first annual Coho derby.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="1972">
+    <title lang="en">Captain&#x27;s Log</title>
+    <desc lang="en">Capt. Jonathan Moss is fishing in the Northern Indian River Lagoon with DOA Lures Founder, Capt. Mark Nichols.</desc>
   </programme>
-  <programme start="20260927233300" stop="20260928000400" channel="1980">
+  <programme start="20260928000000" stop="20260928000400" channel="1980">
     <title lang="en">Sail Kings</title>
     <desc lang="en">Capt. Jared Raskob joins his long time friend Capt. Jake Roth for a day of fishing in the Florida Keys.</desc>
   </programme>
@@ -6711,7 +6675,11 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Wingshooting USA</title>
     <desc lang="en">Upstate New York, cocker spaniels, classic scenery, and good friends make this a timeless hunting adventure.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928002900" channel="1967">
+  <programme start="20260929235800" stop="20260930003000" channel="1980">
+    <title lang="en">Bushnell Presents Prairie Pursuit</title>
+    <desc lang="en">Greg and his dog travel the province seeking the elusive Canadian Kennel Club&#x27;s hunt test prize ribbons.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928002900" channel="1967">
     <title lang="en">CEV Volleyball Playoff: Numia Vero Volley Milano (ITA) vs Olympiacos (GRE)</title>
     <desc lang="en">CEV Volleyball: Milano hosts Olympiacos in Playoffs on Feb 25, 2026 with a spot in next round at stake.</desc>
   </programme>
@@ -6871,7 +6839,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">CEV Volleyball Finals: Savino Del Bene Scandicci (ITA) vs Fenerbahçe (TUR)</title>
     <desc lang="en">CEV Volleyball: Scandicci hosts Fenerbahçe in Quarter Finals on Mar 11, 2026 in a major showdown.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928020200" channel="1968">
+  <programme start="20260928000000" stop="20260928020200" channel="1968">
     <title lang="en">2025 Wrangler National Finals Rodeo</title>
     <desc lang="en">Round 5 coverage of the 2025 Wrangler National Finals Rodeo from the Thomas &amp; Mack Center in Las Vegas, NV.</desc>
   </programme>
@@ -6939,9 +6907,9 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Puyallup Rodeo</title>
     <desc lang="en">ProRodeo coverage of Performance 4 from the 2026 Puyallup Rodeo in Puyallup, WA.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1987">
-    <title lang="en">Poker After Dark</title>
-    <desc lang="en">Phil Hellmuth, Chris Ferguson, Howard Lederer, Phil Ivey, Doyle Brunson, and Daniel Negreanu.</desc>
+  <programme start="20260929233000" stop="20260930030000" channel="1968">
+    <title lang="en">Puyallup Rodeo</title>
+    <desc lang="en">ProRodeo coverage of the Sunday Finals from the 2026 Puyallup Rodeo in Puyallup, WA.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="1987">
     <title lang="en">Poker After Dark</title>
@@ -7107,11 +7075,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Poker Masters 2024, Event 1: $5,100 No-Limit Hold&#x27;em</title>
     <desc lang="en">Event 1: $5,100 No-Limit Hold&#x27;em final table from PokerGo Studio in Las Vegas.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234400" channel="1988">
-    <title lang="en">WPT Seminole Hard Rock Showdown 2021 - Part 3</title>
-    <desc lang="en">It’s crunch time in Hollywood, Florida as only one of three remaining players can be crowned champion receiving over $1 million and have their name forever engraved in the Mike Sexton WPT Champions Cup.</desc>
-  </programme>
-  <programme start="20260927234400" stop="20260928004200" channel="1988">
+  <programme start="20260928000000" stop="20260928004200" channel="1988">
     <title lang="en">WPT Theta Network WPT Cash Game 2021 - Part 1</title>
     <desc lang="en">WPT stops in Las Vegas, Nevada for a special edition of the Theta Network WPT Cash Game. The stakes are high with blinds at $100/$200 and there’s $360,000 on the table to start things off. The table features 4-time WPT champion Darren Elias and poker pro Ben Lamb facing off against some tough competition.</desc>
   </programme>
@@ -7312,10 +7276,6 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">WPT Prime Championship 2023 - Part 1</title>
     <desc lang="en">The final table of the inaugural WPT Prime Championship at Wynn Las Vegas is underway. The $2 million guaranteed prizepool event saw a record-setting turnout of 5,430 entries, nearly tripling the guarantee, which means that the eventual winner will walk away with over $700,000 and the title of the first ever WPT Prime Champion. </desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2065">
-    <title lang="en">Banana Ball: Indianapolis Clowns vs Party Animals</title>
-    <desc lang="en">Replay from 9.26.26 at Progressive Field in Cleveland, OH</desc>
-  </programme>
   <programme start="20260928000000" stop="20260928040000" channel="2065">
     <title lang="en">BKFC 87 Hollywood Stewart vs Gaffie</title>
     <desc lang="en">Replay from 3/20/26 at Hard Rock Hotel &amp; Casion in Hollywood, FL. Main card: Stewart vs Gaffie</desc>
@@ -7408,7 +7368,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Bare Knuckle Boxing: BYB Extreme Fighting Series 22</title>
     <desc lang="en">Replay of BKB: BYB Extreme Fighting Series 22</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010000" channel="2064">
+  <programme start="20260928000000" stop="20260928010000" channel="2064">
     <title lang="en">2026 UIPM Pentathlon World Championships</title>
     <desc lang="en">Modern pentathletes showcase their skill, speed, and strength on a global stage.</desc>
   </programme>
@@ -7664,10 +7624,6 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">2027 AFCON Qualifiers - Matchday #2</title>
     <desc lang="en">Nations battle for a coveted spot in Africa&#x27;s biggest football tournament, where world legends are made!</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2063">
-    <title lang="en">The Knockout Room</title>
-    <desc lang="en">A dynamic look at the best fights and knockouts in the beIN Sports combat world.</desc>
-  </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2063">
     <title lang="en">This Is Paris</title>
     <desc lang="en">Keep up on all the latest news about PSG and its current and rising stars.</desc>
@@ -7852,7 +7808,11 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Los Mejores Goles de la Historia Ep. 1</title>
     <desc lang="en">Nothing beats watching the best goals and unforgettable moments in sports-the top, the thrill, the action!</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928013000" channel="2062">
+  <programme start="20260929233000" stop="20260930040000" channel="2063">
+    <title lang="en">Premier Padel Rotterdam</title>
+    <desc lang="en">Premier Padel is a dynamic and exciting new global Padel tour that features the top players of the world.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928013000" channel="2062">
     <title lang="en">Pro Football Today</title>
     <desc lang="en">Previewing every NFL game of the week.</desc>
   </programme>
@@ -7976,11 +7936,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Outspoken With Dan Sileo</title>
     <desc lang="en">Dan Sileo with analysis across sports and wagering.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235500" channel="1958">
-    <title lang="en">LIVE: Pesaro | Finals - Day 2 Evening Session</title>
-    <desc lang="en">Witness the ultimate showdown at the 2026 Acrobatic World Championships as the world’s best acrobatic gymnasts take to the floor one final time, with medals on the line in Pesaro. Live and Free on Eurovision Sport.</desc>
-  </programme>
-  <programme start="20260927235500" stop="20260928020500" channel="1958">
+  <programme start="20260928000000" stop="20260928020500" channel="1958">
     <title lang="en">Kontiolahti | Men 4×7.5km Relay</title>
     <desc lang="en">The Men’s 4×7.5km Relay at the IBU World Cup Kontiolahti is live on Eurovision Sport, showcasing teamwork, speed and tactical exchanges on the snow.</desc>
   </programme>
@@ -8068,7 +8024,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Rome | Finals - Day 2</title>
     <desc lang="en">Day 2 of the World Taekwondo Grand Prix 2026 in Rome features semi-finals and finals in Women +67kg, Men -68kg and Men +80kg. Witness explosive action, tactical mastery and the crowning of champions. Live and free on Eurovision Sport.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928002700" channel="2114">
+  <programme start="20260928000000" stop="20260928002700" channel="2114">
     <title lang="en">MASL2 Playoffs: Omaha vs Harrisburg</title>
     <desc lang="en">MASL2 playoff arena soccer matchup between Omaha and Harrisburg.</desc>
   </programme>
@@ -8244,24 +8200,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">TXC MMA - Legends 79 (2018)</title>
     <desc lang="en">TXC MMA Legends 79, MMA event</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233100" channel="2059">
-    <title lang="en">Transition 3.mp4</title>
-  </programme>
-  <programme start="20260927233100" stop="20260927234300" channel="2059">
-    <title lang="en">FPL HIGHER OR LOWER WITH AZ + SAM! ⁉️ ｜ FPL Tips 26⧸27 [kz4qn4NI9Sk].mp4, Segment ID: 3</title>
-    <desc lang="en">FPL HIGHER OR LOWER WITH AZ + SAM! ⁉️ ｜ FPL Tips 26⧸27 [kz4qn4NI9Sk]</desc>
-  </programme>
-  <programme start="20260927234300" stop="20260927234500" channel="2059">
-    <title lang="en">Transition 3.mp4</title>
-  </programme>
-  <programme start="20260927234500" stop="20260927235700" channel="2059">
-    <title lang="en">FPL HIGHER OR LOWER WITH AZ + SAM! ⁉️ ｜ FPL Tips 26⧸27 [kz4qn4NI9Sk].mp4, Segment ID: 4</title>
-    <desc lang="en">FPL HIGHER OR LOWER WITH AZ + SAM! ⁉️ ｜ FPL Tips 26⧸27 [kz4qn4NI9Sk]</desc>
-  </programme>
-  <programme start="20260927235700" stop="20260927235800" channel="2059">
-    <title lang="en">Transition 3.mp4</title>
-  </programme>
-  <programme start="20260927235800" stop="20260928001000" channel="2059">
+  <programme start="20260928000000" stop="20260928001000" channel="2059">
     <title lang="en">FPL HIGHER OR LOWER WITH AZ + SAM! ⁉️ ｜ FPL Tips 26⧸27 [kz4qn4NI9Sk].mp4, Segment ID: 5</title>
     <desc lang="en">FPL HIGHER OR LOWER WITH AZ + SAM! ⁉️ ｜ FPL Tips 26⧸27 [kz4qn4NI9Sk]</desc>
   </programme>
@@ -9559,11 +9498,24 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">MAN CITY FOUND GUILTY OF CHARGES! Punishment To Be Decided! ｜ Live At 5 [eciNvl_2PTw].mp4, Segment ID: 3</title>
     <desc lang="en">MAN CITY FOUND GUILTY OF CHARGES! Punishment To Be Decided! ｜ Live At 5 [eciNvl_2PTw]</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234600" channel="2058">
-    <title lang="en">Premium Teaching Pro Lesson Taira Dote 1</title>
-    <desc lang="en">A lesson program aimed at golfers who are struggling or wish to improve further, offering more practical lessons that directly benefit them on the course.</desc>
+  <programme start="20260929233200" stop="20260929233400" channel="2059">
+    <title lang="en">Transition 3.mp4</title>
   </programme>
-  <programme start="20260927234600" stop="20260928000200" channel="2058">
+  <programme start="20260929233400" stop="20260929234600" channel="2059">
+    <title lang="en">MAN CITY FOUND GUILTY OF CHARGES! Punishment To Be Decided! ｜ Live At 5 [eciNvl_2PTw].mp4, Segment ID: 4</title>
+    <desc lang="en">MAN CITY FOUND GUILTY OF CHARGES! Punishment To Be Decided! ｜ Live At 5 [eciNvl_2PTw]</desc>
+  </programme>
+  <programme start="20260929234600" stop="20260929234700" channel="2059">
+    <title lang="en">Transition 3.mp4</title>
+  </programme>
+  <programme start="20260929234700" stop="20260929235900" channel="2059">
+    <title lang="en">MAN CITY FOUND GUILTY OF CHARGES! Punishment To Be Decided! ｜ Live At 5 [eciNvl_2PTw].mp4, Segment ID: 5</title>
+    <desc lang="en">MAN CITY FOUND GUILTY OF CHARGES! Punishment To Be Decided! ｜ Live At 5 [eciNvl_2PTw]</desc>
+  </programme>
+  <programme start="20260929235900" stop="20260930000100" channel="2059">
+    <title lang="en">Transition 3.mp4</title>
+  </programme>
+  <programme start="20260928000000" stop="20260928000200" channel="2058">
     <title lang="en">Premium Teaching Pro Lesson Taira Dote 2</title>
     <desc lang="en">A lesson program aimed at golfers who are struggling or wish to improve further, offering more practical lessons that directly benefit them on the course.</desc>
   </programme>
@@ -10167,9 +10119,13 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Premium Teaching Pro Lesson Rina Ichikawa 4</title>
     <desc lang="en">A lesson program aimed at golfers who are struggling or wish to improve further, offering more practical lessons that directly benefit them on the course.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2057">
-    <title lang="en">Interview</title>
-    <desc lang="en">Step into the locker room and behind the scenes with &quot;Interview,&quot; where we sit down with players, coaches, analysts, and other basketball personalities for candid conversations, exclusive insights, and compelling stories.</desc>
+  <programme start="20260929233200" stop="20260929234800" channel="2058">
+    <title lang="en">Premium Teaching Pro Lesson Shota Ohnishi 1</title>
+    <desc lang="en">A lesson program aimed at golfers who are struggling or wish to improve further, offering more practical lessons that directly benefit them on the course.</desc>
+  </programme>
+  <programme start="20260929234800" stop="20260930000500" channel="2058">
+    <title lang="en">Premium Teaching Pro Lesson Shota Ohnishi 2</title>
+    <desc lang="en">A lesson program aimed at golfers who are struggling or wish to improve further, offering more practical lessons that directly benefit them on the course.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2057">
     <title lang="en">Interview</title>
@@ -10551,9 +10507,9 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Latest News</title>
     <desc lang="en">Stay ahead of the game with our &quot;Latest News&quot; segment, where we bring you up-to-the-minute updates, breaking stories, and exclusive insights from the world of basketball. </desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2056">
-    <title lang="en">Get the Score</title>
-    <desc lang="en">Your instant scoreboard for all things football, delivering real-time updates and comprehensive match analyses.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="2057">
+    <title lang="en">Highlights</title>
+    <desc lang="en">Relive the thrill of the game with our &quot;Highlights&quot; program, where we compile the most exhilarating moments, jaw-dropping plays, and game-changing performances from basketball courts around the globe.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2056">
     <title lang="en">Ace Net News</title>
@@ -10935,9 +10891,9 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Latest News</title>
     <desc lang="en">Your ultimate destination for the most up-to-date and comprehensive coverage of the world of soccer. Stay ahead in the game as we deliver breaking news, exclusive interviews, and in-depth analyses from the dynamic realm of football.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2055">
-    <title lang="en">Latest News</title>
-    <desc lang="en">Stay ahead of the curve with Homerun latest news. From player trades to team updates, and everything in between, the freshest news from trhe baseball world.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="2056">
+    <title lang="en">Get the Score</title>
+    <desc lang="en">Your instant scoreboard for all things football, delivering real-time updates and comprehensive match analyses.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2055">
     <title lang="en">Latest News</title>
@@ -11319,9 +11275,9 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Get the Score</title>
     <desc lang="en">Tune in to Homerun, your Baseball channel for real-time updates on all the latest games. We keep you updated with scores, inning-by-inning updates, and key stats</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2054">
-    <title lang="en">Interview</title>
-    <desc lang="en">Get up close and personal with the biggest names in tennis on AceTV&#x27;s Interview program. Join our hosts as they sit down with players, coaches, and other key figures from the tennis world to discuss their careers, experiences, and insights. </desc>
+  <programme start="20260929233000" stop="20260930000000" channel="2055">
+    <title lang="en">Get the Score</title>
+    <desc lang="en">Tune in to Homerun, your Baseball channel for real-time updates on all the latest games. We keep you updated with scores, inning-by-inning updates, and key stats</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2054">
     <title lang="en">Interview</title>
@@ -11703,7 +11659,11 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Latest News</title>
     <desc lang="en">Stay ahead of the game with AceTV&#x27;s Latest News program, where we bring you up-to-the-minute updates on everything happening in the world of tennis.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010000" channel="2052">
+  <programme start="20260929233000" stop="20260930000000" channel="2054">
+    <title lang="en">Highlights</title>
+    <desc lang="en">Missed out on the action? Fear not! AceTV&#x27;s Highlights program compiles the most thrilling moments from recent matches, ensuring you catch every ace, volley, and match point. </desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928010000" channel="2052">
     <title lang="en">AYM Sports</title>
   </programme>
   <programme start="20260928010000" stop="20260928030000" channel="2052">
@@ -11778,9 +11738,6 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
   <programme start="20260929230000" stop="20260930010000" channel="2052">
     <title lang="en">AYM Sports</title>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2051">
-    <title lang="en">UK Challenge 2024</title>
-  </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2051">
     <title lang="en">UK Challenge 2024</title>
   </programme>
@@ -11827,7 +11784,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
   <programme start="20260928063000" stop="20260928070000" channel="2051">
     <title lang="en">Video Elephant</title>
   </programme>
-  <programme start="20260927233000" stop="20260928020000" channel="2049">
+  <programme start="20260928000000" stop="20260928020000" channel="2049">
     <title lang="en">2026 GAA Classic Car Auction</title>
     <desc lang="en">The GAA Classic Cars Auction features over 700 vehicles at its facility in Greensboro.</desc>
   </programme>
@@ -12074,7 +12031,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
   <programme start="20260929230000" stop="20260930000000" channel="2049">
     <title lang="en">2026 Best of GAA Classic Car Auctions</title>
   </programme>
-  <programme start="20260927233000" stop="20260928020000" channel="2048">
+  <programme start="20260928000000" stop="20260928020000" channel="2048">
     <title lang="en">2026 GAA Classic Car Auction</title>
     <desc lang="en">The GAA Classic Cars Auction features over 700 vehicles at its facility in Greensboro.</desc>
   </programme>
@@ -12320,10 +12277,6 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
   </programme>
   <programme start="20260929230000" stop="20260930000000" channel="2048">
     <title lang="en">2026 Best of GAA Classic Car Auctions</title>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2046">
-    <title lang="en">AmeriCarna - ROAR AT THE SHORE</title>
-    <desc lang="en">On the beaches of Wildwood, NJ, an iconic vintage race, The Race of Gentleman, takes place annually: period cars, period dress, pure authenticity. Ray puts a car in the race with a very special driver, who turns out not to be a Gentleman.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="2046">
     <title lang="en">AmeriCarna - DAN GURNEY</title>
@@ -12597,11 +12550,11 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Two Guys Garage - Carb Re-Build</title>
     <desc lang="en">Kevin and Bryan continue re-building our 67 Camaro by rebuilding the quadra-jet carburetor.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233500" channel="2045">
-    <title lang="en">Champions of the Future Karting Academy 2026 - Rd 1 Valencia (Spain) - Race 2</title>
-    <desc lang="en">With young drivers competing in three categories the Academy program aim is to increase the inclusion into professional kart racing through the arrive and drive concept.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="2046">
+    <title lang="en">Two Guys Garage - Nova Project</title>
+    <desc lang="en">Bryan does some welding on a 66 Nova while Kevin takes a trip to the dyno to dial in the new EFI system for the small block engine.</desc>
   </programme>
-  <programme start="20260927233500" stop="20260928011500" channel="2045">
+  <programme start="20260928000000" stop="20260928011500" channel="2045">
     <title lang="en">GT World Challenge Asia 2026 - Rd 1 : Sepang</title>
     <desc lang="en">Full coverage from the GT World Challenge Asia 2026 season!</desc>
   </programme>
@@ -12765,9 +12718,9 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Champions of the Future Karting Academy 2026 - Rd 1 Valencia (Spain) - Race 2</title>
     <desc lang="en">With young drivers competing in three categories the Academy program aim is to increase the inclusion into professional kart racing through the arrive and drive concept.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2044">
-    <title lang="en">American Racing Legends w/Peter Starr</title>
-    <desc lang="en">Fabio spends time with Peter Starr discussing his passion for motorcycling.</desc>
+  <programme start="20260929233400" stop="20260930011400" channel="2045">
+    <title lang="en">GT World Challenge Asia 2026 - Rd 1 : Sepang</title>
+    <desc lang="en">Full coverage from the GT World Challenge Asia 2026 season!</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2044">
     <title lang="en">The Motocross Files</title>
@@ -12955,10 +12908,6 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Cycle News Presents: 2025 Moab Hard Enduro and a motorcycle trip to Thailand</title>
     <desc lang="en">Cycle News crew takes on the 2025 Moab Hard Enduro and then it&#x27;s off to tour Thailand.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2043">
-    <title lang="en">NHRA Classics: 1983 Summernationals </title>
-    <desc lang="en">Joe Amato and Shirley Muldowney are featured in the 1983 race from Englishtown, NJ</desc>
-  </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2043">
     <title lang="en">NHRA Classics: 1983 Winternationals</title>
     <desc lang="en">ABC&#x27;s Wide World of Sports covers the 1983 Winternationals from Pomona, CA</desc>
@@ -13071,9 +13020,6 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">NHRA Classics: 1983 Summernationals </title>
     <desc lang="en">Joe Amato and Shirley Muldowney are featured in the 1983 race from Englishtown, NJ</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2042">
-    <title lang="en">Asian Le Mans Series</title>
-  </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2042">
     <title lang="en">Asian Le Mans Series</title>
   </programme>
@@ -13121,11 +13067,7 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
   <programme start="20260928063000" stop="20260928070000" channel="2042">
     <title lang="en">Asian Le Mans Series</title>
   </programme>
-  <programme start="20260927233000" stop="20260927233200" channel="2040">
-    <title lang="en">Supercars</title>
-    <desc lang="en">German Engineering stands for quality, precision and, above all, impressive cars. Prime examples of this are the 135 million euro SLR and the AMG One. Also: the BMW M240i and the Mercedes-AMG GT 63 S E Performance.</desc>
-  </programme>
-  <programme start="20260927233200" stop="20260928000400" channel="2040">
+  <programme start="20260928000000" stop="20260928000400" channel="2040">
     <title lang="en">Supercars</title>
     <desc lang="en">These family station wagons provide a real adrenaline rush. The specialists at MTM catapult the Audi RS6 Avant with 1001 hp into the hypercar league. And the 408 hp AMG C43 is supposed to be more than just a family transporter. We put them to the test.</desc>
   </programme>
@@ -13577,9 +13519,13 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Classic Ride</title>
     <desc lang="en">Cars like the Ford GT 40, the Jaguar D-Type or the Mercedes 300 SL wrote history on the race track and now break records at auctions. A sumptuously restored 300 SL will start at the most famous classic car rally in the world, the Mille Miglia.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2039">
-    <title lang="en">Ferrari Challenge North America - Trofeo Pirelli - Sonoma Raceway Race 2</title>
-    <desc lang="en">Ferrari Challenge North America Trofeo Pirelli class Race 2 from Sonoma Raceway in Sonoma, CA (7/26/26)</desc>
+  <programme start="20260929234300" stop="20260929235300" channel="2040">
+    <title lang="en">Audi Quattro</title>
+    <desc lang="en">Advantage through Technology on rally tracks. The Audi Quattro shocks opponents.</desc>
+  </programme>
+  <programme start="20260929235300" stop="20260930000000" channel="2040">
+    <title lang="en">Ford GT40</title>
+    <desc lang="en">With their V8 cars, Ford showed that they were able to build race winners. The Ford GT40 was a prime example for that, especially in Le Mans.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928013000" channel="2039">
     <title lang="en">Trans Am by Pirelli - VIRginia International Raceway - Round 11</title>
@@ -13697,13 +13643,9 @@ fish previously dropped reefs before sinking the famed BLACK PEARL from iconic f
     <title lang="en">Crate Racin&#x27; USA TV - 35th Annual Ice Bowl - Part 1</title>
     <desc lang="en">Part 1 of the 2026 Ice Bowl from Talladega Short Track featuring Sportsman &amp; Street Stock features. (1/3/26)</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233400" channel="2038">
-    <title lang="en">S1E3 - Wild West Adventure Tour</title>
-    <desc lang="en">S1E3 - Wild West Adventure Tour</desc>
-  </programme>
-  <programme start="20260927233400" stop="20260928000000" channel="2038">
-    <title lang="en">S2E5 - How Do YOU Hotrod</title>
-    <desc lang="en">S2E5 - How Do YOU Hotrod</desc>
+  <programme start="20260929233000" stop="20260930010000" channel="2039">
+    <title lang="en">Hunt the Front Super Dirt Series - King of the Mountain</title>
+    <desc lang="en">Coverage of the King of the Mountain from Smoky Mountain Speedway in Maryville,TN (8/22/26)</desc>
   </programme>
   <programme start="20260928000000" stop="20260928005000" channel="2038">
     <title lang="en">S2E5 - Built For Speed</title>
@@ -14207,9 +14149,9 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">S1E12 - Blue Martian</title>
     <desc lang="en">Rod and Style TV celebrates hot rod culture, traditional customs, and lowbrow art, delivering top-notch entertainment and insights into the vibrant and creative world of custom automotive lifestyle.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2034">
-    <title lang="en">Saturday Night Lucha Plus</title>
-    <desc lang="en">Acción intensa con IWRG en Naucalpan</desc>
+  <programme start="20260929235100" stop="20260930001300" channel="2038">
+    <title lang="en">S1E5 - Nichols Customs</title>
+    <desc lang="en">This new series follows Justin Nichols and his crew during their wild custom builds and crazy antics at their new shop in Illinois.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="2034">
     <title lang="en">Café del Ring</title>
@@ -14335,7 +14277,7 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">Tryout 2026 IWRG</title>
     <desc lang="en">El Team Shocker bajo presión! Apareció el ruso Serge Sullivan con un estilo diferente vs el  mexicano Madness</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928024200" channel="2033">
+  <programme start="20260928000000" stop="20260928024200" channel="2033">
     <title lang="en">GLORY 109: Welterweight GP</title>
     <desc lang="en">GLORY double champ Chico Kwasi (46-6-2, 23 KO) will defend his GLORY welterweight world championship in the main event in a trilogy fight against top Bulgarian Teodor Hristov (20-5, 8 KO). A gigantic heavyweight clash takes place as former interim heavyweight champion Tariq ‘Cookie’ Osaro (31-5-1, 17 KO) collides with the legend Errol ‘The Bonecrusher’ Zimmerman (112-21-1, 45 KO). Also happening at GLORY 109 are the Welterweight Proving Grounds. Several match-ups will take place where fighters aim to impress in order to put their names forward for the GLORY welterweight eight-man grand prix at the end of the year.</desc>
   </programme>
@@ -14399,11 +14341,7 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">K1 WGP Tokyo FINAL 2006</title>
     <desc lang="en">The top 8 Heavyweight kickboxers in the world compete in a 1 day tournament to see who will be crowned World Grand Prix Champion for 2006.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233700" channel="2032">
-    <title lang="en">BKB Bare Knuckle 57: Terrill vs de la Motte</title>
-    <desc lang="en">BKB returns to London with Terrill vs. de la Motte, plus Gary Jhon vs. Vargas Jr., July 25, 2026.</desc>
-  </programme>
-  <programme start="20260927233700" stop="20260928024900" channel="2032">
+  <programme start="20260928000000" stop="20260928024900" channel="2032">
     <title lang="en">LFA 239: Mecate vs Exposito</title>
     <desc lang="en">Features Chris Mecate vs. Manuel Exposito in a featherweight bout from Ventura, California. August 21, 2026.</desc>
   </programme>
@@ -14519,11 +14457,7 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">Glory 54 SuperFight Series: Danyo Ilunga vs Fraser Weightman</title>
     <desc lang="en">Features Ilunga vs Weightman in a Light Heavyweight bout from Birmingham. June 2, 2018.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233100" channel="2031">
-    <title lang="en">UFA 367 - Up Next Fighting 11 - Middleweight Championship Part 2</title>
-    <desc lang="en">United Fight Alliance presents Up Next Fighting 11, the Middleweight Championship, from Southern California. In this episode of UFA, wrestler Armen Piloyan faces striker Diego Perez in a lightweight clash and Steven O&#x27;Bryant steps into the cage with Anthony Zaragosa. In the main event challenger Sidiah Parker looks to take the belt from the current champion Curtis Millender. Special guest appearance from the youngest ring annoucer in the world, Cameron Michael &quot;Killer Cam&quot; introduces the main event fighters.</desc>
-  </programme>
-  <programme start="20260927233100" stop="20260928002900" channel="2031">
+  <programme start="20260928000000" stop="20260928002900" channel="2031">
     <title lang="en">UFA 411 - Clan Wars 50</title>
     <desc lang="en">United Fight Alliance presents Clan Wars 50 from Belfast. Up first a lightweight title bout with Dara O&#x27;Sullivan versus Sam &quot;Slam&quot; Simon, Nathan Chambers squares off against Brian Damian in the featherweight division, Lewis Byrne faces Latvian Juris Ruckanovs and Mike McBride steps into the ring with Billy Sutherland in the Bantamweight division with a title on the line. In the main event for the Superlightweight title, Peter Halpenny takes on Jamie McCaugherty.</desc>
   </programme>
@@ -14719,11 +14653,11 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">UFA 401 - Bare Knuckle Boxing 37 part 3</title>
     <desc lang="en">United Fight Alliance presents Bare Knuckle Boxing 37 part 3 from London. First up in a British featherweight title clash, defending champ Rolando Dy steps into the cage with Martin Reffell and in the co-main event for the World heavyweight Title, challenger Richie Leak takes on reighing chanpionship Dan Podmore. In the main event, watch defending champ, Jimmy Sweeney as he faces James Connelly, world lightweight champion.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234500" channel="2030">
-    <title lang="en">IMPACT in 60</title>
-    <desc lang="en">Reliving some of the best matches of Bobby Roode&#x27;s career against Kurt Angle and Gunner.</desc>
+  <programme start="20260929235100" stop="20260930004900" channel="2031">
+    <title lang="en">UFA 470 - Up Next Fighting 16 part 1</title>
+    <desc lang="en">United Fight Alliance presents Up Next Fighting 16 part 1 from the Commerce Hotel and Casino in Southern California. Starting off this episode is Gebril Chaibi versus Miguel Guzman in a flyweight bout followed by a light heavyweight matchup as Blair Sannoh and Emmanueli Adzoh step into the cage. In the main event, Anthony &quot;The Bully&quot; Romero takes on Ricardo Diaz, the Brazillian veteran, for the vacant UNF Bantamweight title.</desc>
   </programme>
-  <programme start="20260927234500" stop="20260928004500" channel="2030">
+  <programme start="20260928000000" stop="20260928004500" channel="2030">
     <title lang="en">Best of ROH Wrestling</title>
     <desc lang="en">Features the biggest stars from ROH&#x27;s past including CM Punk, Bryan Danielson and Samoa Joe.</desc>
   </programme>
@@ -14867,11 +14801,11 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">IMPACT in 60</title>
     <desc lang="en">Highighting the best matches in Slammiversary history, including Austin Aries vs. Samoa Joe from Slammiversary 2010.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234300" channel="2029">
-    <title lang="en">Ultimate Warrior Challenge - Episode 04</title>
-    <desc lang="en">Ultimate Warrior Challenge is one of Europe&#x27;s leading MMA shows, since it&#x27;s inception in 2006 it&#x27;s has grown steadily and delivered some of the most exciting MMA fights Europe has seen, with a truly Internationalfight roster, UWC has built a solid reputation for bringing some of the Worlds toughest fighters to square off in the UWC octagon, fighters from the UK, USA, Brazil, Sweden, Italy, Africa, Poland, France, Cyprus, Greece have all fought in the UWC cage. UFC stars such as Simeon Thoreson, Luke &#x27;Bigslow&#x27; Barnatt, RiccoRodriguez,Thierry &quot;The African Assassin&quot; Sokoudjou, Phil De Fries, Paul Kelly to name but a few, have graced the UWC cage. UWC continues to grow and to bring the fight fans across Europe the fights they want to see.</desc>
+  <programme start="20260929234500" stop="20260930003800" channel="2030">
+    <title lang="en">Best of ROH Wrestling</title>
+    <desc lang="en">Features the biggest stars from ROH&#x27;s past including CM Punk, Bryan Danielson and Samoa Joe.</desc>
   </programme>
-  <programme start="20260927234300" stop="20260928001300" channel="2029">
+  <programme start="20260928000000" stop="20260928001300" channel="2029">
     <title lang="en">Shock n Awe - Episode 01</title>
     <desc lang="en">Spartan Events is into its third year of running its hugely successful promotion, Shock N Awe. With top match making throughout the fight cards, they have been touted as some of the biggest and toughest fights in the UK. Shock N Awe consistently delivers hard hitting action, also going one step further by adding in the personalities from MC Ricky Wright, Ring Girls Poppy and Alex and as well as the huge UK fight teams!</desc>
   </programme>
@@ -15542,7 +15476,11 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">Shock N Awe - Episode 8</title>
     <desc lang="en">The Premier MMA promotion, Telecast live across the globe Showcasing some of the worlds best MMA athletes.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928033500" channel="2024">
+  <programme start="20260929234400" stop="20260930000100" channel="2029">
+    <title lang="en">M1Challenge87_MikutsaVSSilva.mp4</title>
+    <desc lang="en">The Premier MMA promotion, Telecast live across the globe Showcasing some of the worlds best MMA athletes.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928033500" channel="2024">
     <title lang="en">MMA Series Gold. Best Tournaments: MMA Series-50: Grand Arena. Y.Ekimov, S.Bobryshev, A.Podmarev</title>
     <desc lang="en">MMA Series Gold. Best Tournaments: MMA Series-50: Grand Arena. Y.Ekimov, S.Bobryshev, A.Podmarev</desc>
   </programme>
@@ -15630,15 +15568,7 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">MMA Series. Top Heavyweight Fighters. V.Walker, Z.Gadzhibabayev, S.Dyakonov</title>
     <desc lang="en">MMA Series. Top Heavyweight Fighters. V.Walker, Z.Gadzhibabayev, S.Dyakonov</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233200" channel="2023">
-    <title lang="en">Inside ArmWrestling #41 - LEVAN BEATS DEVON?</title>
-    <desc lang="en">Inside ArmWrestling #41 - LEVAN BEATS DEVON?</desc>
-  </programme>
-  <programme start="20260927233200" stop="20260927234800" channel="2023">
-    <title lang="en">Inside ArmWrestling #30 - What to Expect - East vs. West #12 ?!</title>
-    <desc lang="en">Inside ArmWrestling #30 - What to Expect - East vs. West #12 ?!</desc>
-  </programme>
-  <programme start="20260927234800" stop="20260928000600" channel="2023">
+  <programme start="20260928000000" stop="20260928000600" channel="2023">
     <title lang="en">Inside ArmWrestling #49 - Armwrestling Sport is Worldwide</title>
     <desc lang="en">Inside ArmWrestling #49 - Armwrestling Sport is Worldwide</desc>
   </programme>
@@ -16266,7 +16196,15 @@ The road wasn’t easy. Breakdowns, setbacks, and hurdles stood in the way, and 
     <title lang="en">Inside ArmWrestling #41 - LEVAN BEATS DEVON?</title>
     <desc lang="en">Inside ArmWrestling #41 - LEVAN BEATS DEVON?</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010500" channel="2021">
+  <programme start="20260929233700" stop="20260929235400" channel="2023">
+    <title lang="en">Inside ArmWrestling #30 - What to Expect - East vs. West #12 ?!</title>
+    <desc lang="en">Inside ArmWrestling #30 - What to Expect - East vs. West #12 ?!</desc>
+  </programme>
+  <programme start="20260929235400" stop="20260930001100" channel="2023">
+    <title lang="en">Inside ArmWrestling #49 - Armwrestling Sport is Worldwide</title>
+    <desc lang="en">Inside ArmWrestling #49 - Armwrestling Sport is Worldwide</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928010500" channel="2021">
     <title lang="en">DFB Pokal 2017/18 Relive: FC Schalke 04 - Eintracht Frankfurt</title>
     <desc lang="en">Full match of FC Schalke 04 - Eintracht Frankfurt from the semifinals of the 2017/2018 DFB-Pokal season!</desc>
   </programme>
@@ -16425,11 +16363,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">3. Liga 2026/27 Highlight Show Matchday 7</title>
     <desc lang="en">Highlight Show of Matchday 7 of the 2026/27 3. Liga season!</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235500" channel="2017">
-    <title lang="en">Orígenes</title>
-    <desc lang="en">Descubre los primeros pasos de Pedri en el mundo del futbol antes de llegar al Barça</desc>
-  </programme>
-  <programme start="20260927235500" stop="20260928002000" channel="2017">
+  <programme start="20260928000000" stop="20260928002000" channel="2017">
     <title lang="en">Todos los goles</title>
     <desc lang="en">Todos los goles de los grandes jugadores de la historia del Barça</desc>
   </programme>
@@ -16629,7 +16563,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">FULL MATCH | Barça Atlètic - Peña Sport | 2a RFEF 2026/2027</title>
     <desc lang="en">FULL MATCH | Barça Atlètic - Peña Sport | 2a RFEF 2026/2027</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928001700" channel="2015">
+  <programme start="20260928000000" stop="20260928001700" channel="2015">
     <title lang="en">1999/00 World Series Cup - Match 13 - Australia v Pakistan</title>
   </programme>
   <programme start="20260928001700" stop="20260928021700" channel="2015">
@@ -16732,7 +16666,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
   <programme start="20260929220000" stop="20260930000400" channel="2015">
     <title lang="en">BBL|02 - Match 2 - Sydney Sixers v Sydney Thunder</title>
   </programme>
-  <programme start="20260927233000" stop="20260928003000" channel="2014">
+  <programme start="20260928000000" stop="20260928003000" channel="2014">
     <title lang="en">2023 WWBA World Championship - Rewind</title>
     <desc lang="en">USA Prime vs Baum Bat Scout &amp; D-Bat/United Baseball Club vs GBG/TB SoCal from 2023 WWBA World Championship.</desc>
   </programme>
@@ -16892,10 +16826,6 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">2026 PG All-American Classic - Live</title>
     <desc lang="en">60 of the Top High School prospects take the field in Philadelphia for the PG All-American Classic!</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2012">
-    <title lang="en">2025 MIAA Lacrosse Finals</title>
-    <desc lang="en">B Final: Saints Peter &amp; Paul Sabers vs Archbishop Curley Friars from May 16, 2025</desc>
-  </programme>
   <programme start="20260928000000" stop="20260928020000" channel="2012">
     <title lang="en">2025 MIAA Lacrosse Finals</title>
     <desc lang="en">A Final: Calvert Hall Cardinals vs Spalding Cavaliers from May 16, 2025</desc>
@@ -16996,7 +16926,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">Coastal Athletic Association Men&#x27;s Lacrosse 2025</title>
     <desc lang="en">Lacrosse CAA Men&#x27;s: Manhattan @ Fairfield 2/22/25</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928030000" channel="2011">
+  <programme start="20260928000000" stop="20260928030000" channel="2011">
     <title lang="en">25/26 ACL Albuquerque Open: Women&#x27;s, Senior, and Junior Singles</title>
     <desc lang="en">Women&#x27;s, Senior, and Junior Singles from December 5, 2025</desc>
   </programme>
@@ -17036,11 +16966,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">NOT_PUBLISHED:  (show)</title>
     <desc lang="en">Open 1: Singles from October 5, 2025</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234400" channel="2010">
-    <title lang="en">ITSF World Cup 2012 Final Men Doubles Collignon – Van De Cauter (Bel) vs Atha – Hamilton (Grb) </title>
-    <desc lang="en">The ITSF retrospective continues with the Final Doubles Men opposing Collignon &amp; Van de Cauter of Belgium versus Atha &amp; Hamilton of Great Britainduring the ITSF World Cup 2012 in Nantes (France)</desc>
-  </programme>
-  <programme start="20260927234400" stop="20260928005800" channel="2010">
+  <programme start="20260928000000" stop="20260928005800" channel="2010">
     <title lang="en">ITSF World Cup 2013 Semi Double Men France vs Austria </title>
     <desc lang="en">The ITSF retrospective continues with the Semi Double Men opposing France and Austria during the ITSF World Cup 2013 in Nantes (France)</desc>
   </programme>
@@ -17167,7 +17093,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">World Cup 2019 Murcia Nations Cup Quarterfinal – France vs Netherlands </title>
     <desc lang="en">The ITSF retrospectives continue with the Nations Cup Quarterfinal between France and the Netherlands at the ITSF World Cup 2019 in Murcia, Spain.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928004100" channel="2006">
+  <programme start="20260928000000" stop="20260928004100" channel="2006">
     <title lang="en">O Town Bangers vs St Pete Iceburgs</title>
     <desc lang="en">The O Town Banggers face off against the Saint Pete Icebergs in the final afternoon match. Both teams undefeated, aiming for the finals against Miami Blaze. Key moments highlight strategic plays and errors.</desc>
   </programme>
@@ -17331,11 +17257,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">Team Championship Match - Virginia Tech vs. Liberty University</title>
     <desc lang="en">Experience the pinnacle of collegiate pickleball as Virginia Tech and Liberty University battle for the NCPA 2025 Virginia Beach Regional title. This high-stakes championship matchup features a prize pool of $2,500 and a chance for regional dominance.The action kicks off with an elite men’s doubles match featuring Liberty’s Ben Rice and Derek Cray against Virginia Tech’s undefeated Cody Miller and Caelan Funk. The broadcast also captures intense singles play and critical mixed doubles rallies as both teams fight through high-tension dink battles and &quot;Dreambreaker&quot; level strategy. Watch for standout defensive plays, including ATP (Around the Post) attempts and high-speed hand battles on the Championship Court at Pickleball Virginia Beach.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234300" channel="2005">
-    <title lang="en">Pádelplus - Horacio Álvarez Clementi</title>
-    <desc lang="en">Pádelplus con Horacio Álvarez Clementi</desc>
-  </programme>
-  <programme start="20260927234300" stop="20260928002700" channel="2005">
+  <programme start="20260928000000" stop="20260928002700" channel="2005">
     <title lang="en">Pádelplus - Nacho Vilarino</title>
     <desc lang="en">Pádelplus con Nacho Vilarino</desc>
   </programme>
@@ -17639,11 +17561,11 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">Hugo Cases - Efectos el cortado</title>
     <desc lang="en">Aprende con Hugo Cases a dominar los efectos del cortado.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233200" channel="1997">
-    <title lang="en">Seize The Day</title>
-    <desc lang="en">Seize the Day features some of the best surfers in the world surfing epic waves in California and Hawaii.</desc>
+  <programme start="20260929234400" stop="20260930021100" channel="2005">
+    <title lang="en">Hexagon Cup: Rl9 Team Vs Eleven Eleven (femenino)</title>
+    <desc lang="en">Hexagon cup: RL9 team vs Eleven Eleven (femenino)</desc>
   </programme>
-  <programme start="20260927233200" stop="20260928004300" channel="1997">
+  <programme start="20260928000000" stop="20260928004300" channel="1997">
     <title lang="en">Distance Between Dreams</title>
     <desc lang="en">Pros take on Jaws, Hawaii’s legendary wave, made even bigger and wilder by historically big winter weather.</desc>
   </programme>
@@ -17891,7 +17813,7 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">Isolated</title>
     <desc lang="en">Five world class surfers travel to New Guinea in search of undiscovered waves, but end up discovering so much more.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928001900" channel="1995">
+  <programme start="20260928000000" stop="20260928001900" channel="1995">
     <title lang="en">The Ride Life with Sung Kang S1 - &quot;Korea&quot;</title>
     <desc lang="en">Despite a troubled past of poverty and invasions, Korea has emerged as a car building power-house. Through its unheralded and talented-loaded car scene, Sung reconnects with the land of his birth and finds peace with his estranged mother.</desc>
   </programme>
@@ -18171,11 +18093,11 @@ Now, with Luis Díaz chasing glory, the DFB-Pokal stage awaits a Colombian story
     <title lang="en">Our Auto Expert S1 - &quot;Episode Two&quot;</title>
     <desc lang="en">Nik presents the lavish Rolls Royce Ghost, praises the 2021 Chevy Trailblazer, showcases Genesis&#x27; new arrivals, and introduces Chevrolet&#x27;s Bolt EUV and EV.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235600" channel="1994">
-    <title lang="en">WORLD OF FREESPORTS 2020</title>
-    <desc lang="en">This is a journey to the Silk Road in Central Asia into the adventurous world of canoeing. The Muksu in Tajikistan is one of the three most difficult rapids here. Once immersed in the river, there is no turning back.</desc>
+  <programme start="20260929235200" stop="20260930001900" channel="1995">
+    <title lang="en">Our Auto Expert S1 - &quot;Episode Three&quot;</title>
+    <desc lang="en">Nik unveils the bold Cadillac Escalade, while Mike praises the redesigned Nissan Rogue. Nik shares Alfa Romeo&#x27;s rich 110-year legacy, then cruises in the Lexus LC500 with the top down.</desc>
   </programme>
-  <programme start="20260927235600" stop="20260928001400" channel="1994">
+  <programme start="20260928000000" stop="20260928001400" channel="1994">
     <title lang="en">Copa Kitley GKA Freestyle Kite World Cup 2024 – Cauipe (BRA) – Overall Highlights</title>
     <desc lang="en">The Qatar Airways GKA Kite World Tour 2024 will host the second stop of the freestyle discipline in Cauipe in north-eastern Brazil. The Copa Kitley GKA Freestyle Kite World Cup offers intense competitions in the shallow waters.</desc>
   </programme>
@@ -18463,33 +18385,11 @@ Kashmir, India, holds some of the world’s most spectacular and mystical mounta
     <title lang="en">WOF Evergreens</title>
     <desc lang="en">Aurelien Routens from France was vice world champion at the Freeride World Tour 2013 and has made a name for himself with his outstanding web series &quot;Carpe Diem&quot;. In our 26-minute portrait, the 36-year-old talks about his life as a snowboard professional.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233600" channel="1993">
-    <title lang="en">Nine Mountains</title>
-    <desc lang="en">The journey of two cyclists (Leo Russell &amp; George Stagg) on a mission to climb the 9 most challenging and notorious mountains in Europe. From Austria To Spain, Nine Mountains is an adventure of brutality and beauty exploring the limits of the mind and body. The boys cycled over 3,200km from blisteri</desc>
+  <programme start="20260929234300" stop="20260930001400" channel="1994">
+    <title lang="en">Vendée Globe 2024</title>
+    <desc lang="en">The Vendée Globe aims to use the media impact of the event to raise public awareness of ocean conservation throughout the round-the-world race. They are direct witnesses to the changes underway, particularly around Antarctica, a region that is under particular threat.</desc>
   </programme>
-  <programme start="20260927233600" stop="20260927234100" channel="1993">
-    <title lang="en">Pierra Menta 2026 Ep.1</title>
-    <desc lang="en">La 40e édition de la Pierra Menta, qui compte également pour le championnat du monde longue distance (ISMF), a démarré sur les chapeaux de roue, animée par les duels franco- français attendus. 
-The 40th edition of the Pierra Menta, which also counts towards the ISMF long-distance world championship,</desc>
-  </programme>
-  <programme start="20260927234100" stop="20260927234700" channel="1993">
-    <title lang="en">Pierra Menta 2026 Ep.2</title>
-    <desc lang="en">Soleil généreux et neige fraîche ont servi de décor au nouvel épisode sportif qui s’est joué sur les pentes du Beaufortain, lors de cette 2e étape sur 4. 
-Generous sunshine and fresh snow provided the backdrop for the new sporting episode which took place on the slopes of Beaufortain, during this 2n</desc>
-  </programme>
-  <programme start="20260927234700" stop="20260927235300" channel="1993">
-    <title lang="en">Pierra Menta 2026 Ep.3</title>
-    <desc lang="en">Au terme d’une 3e étape champagne, les coureurs de la 40e pierra menta ont régalé les centaines de spectateurs montés au sommet du Grand Mont. Le général est bouleversé par la performance d’Emily Harrop et Margot Ravinel. William Bon Mardion et Xavier Gachet résistent et confirment leur statut de fa</desc>
-  </programme>
-  <programme start="20260927235300" stop="20260927235700" channel="1993">
-    <title lang="en">Pierra Menta 2026 Ep.4</title>
-    <desc lang="en">La neige s’est invitée dans la station du Beaufortain en cette 4ᵉ et ultime étape de la Pierra Menta. Malgré des conditions météo difficiles, des milliers de spectateurs ont porté les enfants du pays, William Bon Mardion et Xavier Gachet, dans un ultime duel face à Samuel Équy et Anselme Damevin. Em</desc>
-  </programme>
-  <programme start="20260927235700" stop="20260927235800" channel="1993">
-    <title lang="en">3d Logo Short 25fps</title>
-    <desc lang="en">3d Logo Short 25fps</desc>
-  </programme>
-  <programme start="20260927235800" stop="20260928000900" channel="1993">
+  <programme start="20260928000000" stop="20260928000900" channel="1993">
     <title lang="en">World Rookie Snowboard Finals 2026</title>
     <desc lang="en">After a winter packed with World Rookie Tour stops across Europe, Asia and North America, only the most motivated and talented young athletes have earned their chance to compete in the Finals. Zell am See-Kaprun will once again become the global stage where the future of snowboarding drops in.</desc>
   </programme>
@@ -19255,31 +19155,29 @@ This one-day via Ferrata route is a must-do since it presents an excellent hikin
     <title lang="en">Nine Mountains</title>
     <desc lang="en">The journey of two cyclists (Leo Russell &amp; George Stagg) on a mission to climb the 9 most challenging and notorious mountains in Europe. From Austria To Spain, Nine Mountains is an adventure of brutality and beauty exploring the limits of the mind and body. The boys cycled over 3,200km from blisteri</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233200" channel="1991">
-    <title lang="en">IN THE ZONE_Show_34_pt_2.mp4</title>
-    <desc lang="en">IN THE ZONE_Show_34_pt_2.mp4</desc>
+  <programme start="20260929233500" stop="20260929234000" channel="1993">
+    <title lang="en">Pierra Menta 2026 Ep.1</title>
+    <desc lang="en">La 40e édition de la Pierra Menta, qui compte également pour le championnat du monde longue distance (ISMF), a démarré sur les chapeaux de roue, animée par les duels franco- français attendus. 
+The 40th edition of the Pierra Menta, which also counts towards the ISMF long-distance world championship,</desc>
   </programme>
-  <programme start="20260927233200" stop="20260927233600" channel="1991">
-    <title lang="en">IN THE ZONE_Show_34_pt_3.mp4</title>
-    <desc lang="en">IN THE ZONE_Show_34_pt_3.mp4</desc>
+  <programme start="20260929234000" stop="20260929234500" channel="1993">
+    <title lang="en">Pierra Menta 2026 Ep.2</title>
+    <desc lang="en">Soleil généreux et neige fraîche ont servi de décor au nouvel épisode sportif qui s’est joué sur les pentes du Beaufortain, lors de cette 2e étape sur 4. 
+Generous sunshine and fresh snow provided the backdrop for the new sporting episode which took place on the slopes of Beaufortain, during this 2n</desc>
   </programme>
-  <programme start="20260927233600" stop="20260927234300" channel="1991">
-    <title lang="en">IN THE ZONE_Show_34_pt_4.mp4</title>
-    <desc lang="en">IN THE ZONE_Show_34_pt_4.mp4</desc>
+  <programme start="20260929234500" stop="20260929235100" channel="1993">
+    <title lang="en">Pierra Menta 2026 Ep.3</title>
+    <desc lang="en">Au terme d’une 3e étape champagne, les coureurs de la 40e pierra menta ont régalé les centaines de spectateurs montés au sommet du Grand Mont. Le général est bouleversé par la performance d’Emily Harrop et Margot Ravinel. William Bon Mardion et Xavier Gachet résistent et confirment leur statut de fa</desc>
   </programme>
-  <programme start="20260927234300" stop="20260927234800" channel="1991">
-    <title lang="en">IN THE ZONE_Show_48_Pt_1.mp4</title>
-    <desc lang="en">IN THE ZONE_Show_48_Pt_1.mp4</desc>
+  <programme start="20260929235100" stop="20260929235600" channel="1993">
+    <title lang="en">Pierra Menta 2026 Ep.4</title>
+    <desc lang="en">La neige s’est invitée dans la station du Beaufortain en cette 4ᵉ et ultime étape de la Pierra Menta. Malgré des conditions météo difficiles, des milliers de spectateurs ont porté les enfants du pays, William Bon Mardion et Xavier Gachet, dans un ultime duel face à Samuel Équy et Anselme Damevin. Em</desc>
   </programme>
-  <programme start="20260927234800" stop="20260927235400" channel="1991">
-    <title lang="en">IN THE ZONE_Show_48_Pt_2.mp4</title>
-    <desc lang="en">IN THE ZONE_Show_48_Pt_2.mp4</desc>
+  <programme start="20260929235600" stop="20260930000800" channel="1993">
+    <title lang="en">World Rookie Snowboard Finals 2026</title>
+    <desc lang="en">After a winter packed with World Rookie Tour stops across Europe, Asia and North America, only the most motivated and talented young athletes have earned their chance to compete in the Finals. Zell am See-Kaprun will once again become the global stage where the future of snowboarding drops in.</desc>
   </programme>
-  <programme start="20260927235400" stop="20260927235900" channel="1991">
-    <title lang="en">IN THE ZONE_Show_48_Pt_3.mp4</title>
-    <desc lang="en">IN THE ZONE_Show_48_Pt_3.mp4</desc>
-  </programme>
-  <programme start="20260927235900" stop="20260928000400" channel="1991">
+  <programme start="20260928000000" stop="20260928000400" channel="1991">
     <title lang="en">IN THE ZONE_Show_48_Pt_4.mp4</title>
     <desc lang="en">IN THE ZONE_Show_48_Pt_4.mp4</desc>
   </programme>
@@ -21363,14 +21261,31 @@ This one-day via Ferrata route is a must-do since it presents an excellent hikin
     <title lang="en">IN THE ZONE_Show_29_pt_2.mp4</title>
     <desc lang="en">IN THE ZONE_Show_29_pt_2.mp4</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234500" channel="1990">
-    <title lang="en">{&quot;$&quot;:{&quot;lang&quot;:&quot;EN&quot;}}</title>
+  <programme start="20260929233200" stop="20260929233600" channel="1991">
+    <title lang="en">IN THE ZONE_Show_29_pt_3.mp4</title>
+    <desc lang="en">IN THE ZONE_Show_29_pt_3.mp4</desc>
   </programme>
-  <programme start="20260927234500" stop="20260927235700" channel="1990">
-    <title lang="en">Volcom Presents: The Backyard</title>
-    <desc lang="en">At Pipeline there is flora, fauna, ocean and stone. Volcom Stone. At this point, the Volcom house is practically part of the reef. Between the team, the family, the legacy, the peanut gallery, the respect, the Pipe Pro and the barbecues, you’d be hard pressed not to notice Volcom on the North Shore. </desc>
+  <programme start="20260929233600" stop="20260929234400" channel="1991">
+    <title lang="en">IN THE ZONE_Show_29_pt_4.mp4</title>
+    <desc lang="en">IN THE ZONE_Show_29_pt_4.mp4</desc>
   </programme>
-  <programme start="20260927235700" stop="20260928004100" channel="1990">
+  <programme start="20260929234400" stop="20260929235000" channel="1991">
+    <title lang="en">IN THE ZONE_Show_34_pt_1.mp4</title>
+    <desc lang="en">IN THE ZONE_Show_34_pt_1.mp4</desc>
+  </programme>
+  <programme start="20260929235000" stop="20260929235400" channel="1991">
+    <title lang="en">IN THE ZONE_Show_34_pt_2.mp4</title>
+    <desc lang="en">IN THE ZONE_Show_34_pt_2.mp4</desc>
+  </programme>
+  <programme start="20260929235400" stop="20260929235800" channel="1991">
+    <title lang="en">IN THE ZONE_Show_34_pt_3.mp4</title>
+    <desc lang="en">IN THE ZONE_Show_34_pt_3.mp4</desc>
+  </programme>
+  <programme start="20260929235800" stop="20260930000500" channel="1991">
+    <title lang="en">IN THE ZONE_Show_34_pt_4.mp4</title>
+    <desc lang="en">IN THE ZONE_Show_34_pt_4.mp4</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928004100" channel="1990">
     <title lang="en">Missle 3</title>
   </programme>
   <programme start="20260928004100" stop="20260928005300" channel="1990">
@@ -21910,11 +21825,12 @@ Edited by: Johan Rosen
 
 </desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235000" channel="1989">
-    <title lang="en">Mission Accomplished</title>
-    <desc lang="en">Behind the Gate follows the MXGP paddock to Türkiye for a demanding round under title pressure.</desc>
+  <programme start="20260929233100" stop="20260930004300" channel="1990">
+    <title lang="en">Without a Pedal</title>
+    <desc lang="en">Snowboarding Alaska the hard way. An epic winter bike trip down Canada’s Cassiar Highway turns into a test of survival, obsession, and how far you’ll go for the dream.
+</desc>
   </programme>
-  <programme start="20260927235000" stop="20260928001500" channel="1989">
+  <programme start="20260928000000" stop="20260928001500" channel="1989">
     <title lang="en">Monster Army Movie 15</title>
     <desc lang="en">Young Monster Army athletes push limits with raw talent, progression and action.</desc>
   </programme>
@@ -22270,7 +22186,11 @@ Edited by: Johan Rosen
     <title lang="en">Portugal</title>
     <desc lang="en">Pat breaks his board, and the drive to Portugal gets delayed.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928043000" channel="1986">
+  <programme start="20260929233000" stop="20260930000000" channel="1989">
+    <title lang="en">Lisbon</title>
+    <desc lang="en">Pat and Benji lead the group to some of the lesser known surf spots of Lisbon.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928043000" channel="1986">
     <title lang="en">Hellmuth&#x27;s Home Game Livestream 01-21-26</title>
     <desc lang="en">Hellmuth&#x27;s Home Game filmed live at Grand Sierra Resort in Reno, Nevada (1/21/2026). $25/$50 cash game action featuring Phil Hellmuth, Rampage, Dan &quot;Jungleman&quot; Cates, Xuan Liu, Kelly Minkin, Stanley Tang, Chalie Hook, DJ Washburn &amp; Phillip Hellmuth III</desc>
   </programme>
@@ -22458,7 +22378,7 @@ Edited by: Johan Rosen
     <title lang="en">Best Player in the World DESTROYED by WILD MAN - Poker Night In America</title>
     <desc lang="en">Hellmuth&#x27;s Home Game from Grand Sierra Resort in Reno, Nevada. $25/$50 cash game action featuring Phil Hellmuth, Dan &quot;Jungleman&quot; Cates, Xuan Liu, Randy &#x27;3COIN&#x27; Sadler, DJ Washburn, Phillip Hellmuth III &amp; Chris Nevada.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928002700" channel="1985">
+  <programme start="20260928000000" stop="20260928002700" channel="1985">
     <title lang="en">Rail Heaven Cash Game II 2022 - Part 3</title>
     <desc lang="en">$500/$500 $1K Ante With Daniel &quot;Jungleman&quot; Cates and Haralabos Voulgaris [SUPER HIGH STAKES]</desc>
   </programme>
@@ -22588,10 +22508,6 @@ Edited by: Johan Rosen
   <programme start="20260929225000" stop="20260930003000" channel="1985">
     <title lang="en">WPT World Championship at Wynn Las Vegas 2022 - Part 1</title>
     <desc lang="en">The WPT&#x27;s World Championship Final Table is the place to be! With a massive $4.1 million first prize up for grabs, which six lucky players will take home the title of World Champion? All eyes are on Frank Funaro, Jean-Claude Moussa, Adam Adler, Colton Blomberg, Eliot Hudon, and Benny Glaser as they battle it out in part 1 of this exhilarating tournament.</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1984">
-    <title lang="en">Seminole - Hard Rock 2011 - Parte 1</title>
-    <desc lang="en">La primera parada que el WPT ha realizado en Florida proporciona una mesa final con un poco de todo.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="1984">
     <title lang="en">Seminole - Hard Rock 2011 - Parte 2</title>
@@ -22781,11 +22697,7 @@ Edited by: Johan Rosen
     <title lang="en">WPT Invitational - Part 1</title>
     <desc lang="en">La hermosa estrella de televisión de realidad Trishelle Cannatella ilumina esta fiesta de póker invitacional, pero sus oponentes saben que su belleza viene con cerebros y más que una pequeña apuesta.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233400" channel="1982">
-    <title lang="en">10 Ball European Championship Lasko 2022</title>
-    <desc lang="en">Ten-ball is a rotation pool game using ten balls. European Pool Championship 2022  is held in Lasko </desc>
-  </programme>
-  <programme start="20260927233400" stop="20260928012200" channel="1982">
+  <programme start="20260928000000" stop="20260928012200" channel="1982">
     <title lang="en">10 Ball European Championship Lasko 2022</title>
     <desc lang="en">Ten-ball is a rotation pool game using ten balls. European Pool Championship 2022  is held in Lasko </desc>
   </programme>
@@ -22893,11 +22805,7 @@ Edited by: Johan Rosen
     <title lang="en">3-Cushion Continental Cup 2018</title>
     <desc lang="en">Match between 3 players on a single table. 18 sets to 10 points will be played. Winner of each group will be qualified for the final stage.Match between 3 players on a single table. 18 sets to 10 points will be played. Winner of each group will be qualified for the final stage.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235100" channel="1981">
-    <title lang="en">Sasquatch Mountain Man</title>
-    <desc lang="en">Follow Laramy through how mountain men skinned, fleshed, and tanned animal skins as in the mid 1800s.</desc>
-  </programme>
-  <programme start="20260927235100" stop="20260928002100" channel="1981">
+  <programme start="20260928000000" stop="20260928002100" channel="1981">
     <title lang="en">Sasquatch Mountain Man</title>
     <desc lang="en">Laramy rides the high lonesome in search of mule deer. Learn mountain-man techniques to stalk up close.</desc>
   </programme>
@@ -23261,11 +23169,11 @@ Edited by: Johan Rosen
     <title lang="en">Farming the Wild</title>
     <desc lang="en">Mike and Ranger Christian are out hunting on first day for Fallow Deer, celebrating a kill with camp chili.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233500" channel="1979">
-    <title lang="en">Guns &amp; Gear - Taurus RPC, Ruger Harrier &amp; SureFire SOCOM 4 - S18E2</title>
-    <desc lang="en">Guns &amp; Gear tests the Taurus RPC, Ruger Harrier AR, SureFire SOCOM 4 suppressors, Dan Wesson DWX, and more.</desc>
+  <programme start="20260929235000" stop="20260930002100" channel="1981">
+    <title lang="en">Farming the Wild</title>
+    <desc lang="en">Mike and the Farming the Wild crew need double figures on the ground in a 2d Fallow cull. Lunch: Venison subs.</desc>
   </programme>
-  <programme start="20260927233500" stop="20260928000400" channel="1979">
+  <programme start="20260928000000" stop="20260928000400" channel="1979">
     <title lang="en">Guns &amp; Gear - Gem of a Tech and Clay Wrangler - S18E3</title>
     <desc lang="en">Hands-on looks at the Leupold AE Pro F2 red dot, Gemtech Neutrino 7.62 suppressor, and more.</desc>
   </programme>
@@ -23681,9 +23589,9 @@ Edited by: Johan Rosen
     <title lang="en">First Person Defender - Stranger Tries to Take Child from Playground - S7E8</title>
     <desc lang="en">Kristy watches a stranger grab a little girl from the playground. Can she stop the possible kidnapping?</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1978">
-    <title lang="en">Jimmy Houston Outdoors | Lake Ivie</title>
-    <desc lang="en">Cane Pole fishing for crappie and bass.</desc>
+  <programme start="20260929233900" stop="20260930000100" channel="1979">
+    <title lang="en">First Person Defender - Home Invasion – Wife Upstairs - S7E9</title>
+    <desc lang="en">Steven gets a frantic call: someone’s in the house with his wife upstairs. Can he clear the stairwell and save her?</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="1978">
     <title lang="en">Jimmy Houston Outdoors | Windy and hot</title>
@@ -24041,11 +23949,11 @@ Edited by: Johan Rosen
     <title lang="en">Jimmy Houston Fishing</title>
     <desc lang="en">Angling legend Jimmy Houston takes us on his most successful trips with big fish and hilarious antics.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234900" channel="1977">
-    <title lang="en">Fish TV</title>
-    <desc lang="en">Fish TV heads to the east coast at tries their hand at some Striper fishing in New Brunswick.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="1978">
+    <title lang="en">Jimmy Houston Fishing</title>
+    <desc lang="en">Angling legend Jimmy Houston takes us on his most successful trips with big fish and hilarious antics.</desc>
   </programme>
-  <programme start="20260927234900" stop="20260928002000" channel="1977">
+  <programme start="20260928000000" stop="20260928002000" channel="1977">
     <title lang="en">Fish TV</title>
     <desc lang="en">The Fish TV team heads over sea&#x27;s and hooks up with Le Boat to explore France and the great Tuna fishing on the Mediterranean.</desc>
   </programme>
@@ -24129,11 +24037,7 @@ Edited by: Johan Rosen
     <title lang="en">Homegrown Hunter TV</title>
     <desc lang="en">This is incredible to say the least--to hold his composure, focus on two specific bucks, and pass so many deer when he has a buck tag in his pocket. Mr. Kohnke has some patience! But that is what management of the deer herd is all about.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234500" channel="1976">
-    <title lang="en">Aboard the Eclipse</title>
-    <desc lang="en">Dan and the crew go fishing for bluefin tuna, dorado and yellowtail aboard the Eclipse.</desc>
-  </programme>
-  <programme start="20260927234500" stop="20260928001600" channel="1976">
+  <programme start="20260928000000" stop="20260928001600" channel="1976">
     <title lang="en">Palmas de Cortez Part 2</title>
     <desc lang="en">Dan travels south back down to the beautiful East Cave at hotel Palmas de Cortez.</desc>
   </programme>
@@ -24284,10 +24188,6 @@ Edited by: Johan Rosen
   <programme start="20260928182100" stop="20260928184300" channel="1976">
     <title lang="en">Patriot and Surf Perch </title>
     <desc lang="en">Dan is in on the Outrider looking for calico bass, yellow tail, and white sea bass.</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1975">
-    <title lang="en">Brandon Belt Fishing</title>
-    <desc lang="en">Brandon Belt Fishing Tournaments of 2023.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="1975">
     <title lang="en">Texas Outdoor Lifestyles</title>
@@ -24669,11 +24569,11 @@ Edited by: Johan Rosen
     <title lang="en">Wish You Were Here</title>
     <desc lang="en">We Deliver The Outdoors.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234000" channel="1973">
-    <title lang="en">Warrior Bound</title>
-    <desc lang="en">Join host and skull artist Jana Waller as she takes viewers on hunting and fishing adventures across the globe, featuring breathtaking scenery and incredible wildlife.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="1975">
+    <title lang="en">Key West Slamboree</title>
+    <desc lang="en">A ride catching high-flying sailfish, blackfin tuna, yellow jacks, yellowtail snapper and more.</desc>
   </programme>
-  <programme start="20260927234000" stop="20260928000600" channel="1973">
+  <programme start="20260928000000" stop="20260928000600" channel="1973">
     <title lang="en">The Best of SBTV Season 1</title>
     <desc lang="en">Join host and skull artist Jana Waller as she takes viewers on hunting and fishing adventures across the globe, featuring breathtaking scenery and incredible wildlife.</desc>
   </programme>
@@ -24904,10 +24804,6 @@ Edited by: Johan Rosen
   <programme start="20260928200400" stop="20260928202800" channel="1973">
     <title lang="en">Iowa Whitetail</title>
     <desc lang="en">Jana and John head to Iowa during first gun season in search of a giant with Whitetail Xtreme.</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1971">
-    <title lang="en">UNBRIDLED</title>
-    <desc lang="en">This storytelling series offers exclusive insight into the world’s top show jumping athletes, sharing their stories, ambitions, and the drama that unfolds at the sport’s most prestigious events.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928002500" channel="1971">
     <title lang="en">NHCTV067950001A</title>
@@ -25414,7 +25310,7 @@ Edited by: Johan Rosen
     <title lang="en">Royal Windsor Horse Show</title>
     <desc lang="en">Horse &amp; Country proudly presents highlights from the Royal Windsor Horse Show 2026: Rolex Grand Prix Live event.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928021600" channel="1970">
+  <programme start="20260928000000" stop="20260928021600" channel="1970">
     <title lang="en">LIVE FROM VIENNA </title>
     <desc lang="en">Vienna - The magnificent Schönbrunn Palace, one of Vienna’s most iconic landmarks, welcomes the world’s best riders and horses for four days of thrilling, world-class equestrian sport.</desc>
   </programme>
@@ -25433,10 +25329,6 @@ Edited by: Johan Rosen
   <programme start="20260928065700" stop="20260928085400" channel="1970">
     <title lang="en">VALKENSWAARD - CSI5 1.50m presented by Roelofsen Horse Trucks</title>
     <desc lang="en">Welcome to Valkenswaard Longines Tops International Arena&#x27;s superb facilities were created by LGCT and GCL Founder and President, Jan Tops, and provide the perfect setting for international competition on sweeping grass arenas in this European equestrian hub.</desc>
-  </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1969">
-    <title lang="en">CSI-W 5* La Coruna Longines Trophy - Longines Trophy</title>
-    <desc lang="en">Follow the Longines Trophy challenge over 1.50m in the World Cup qualifier of La Coruna. A competition like no other that ranks in the highest difficulty at CSI5* making it of the most demanding classes on the international circuit. The CSI-W5* La Coruna Longines Trophy is a competition that brings the best riders together under harsh conditions to prove their excellent skills. Who will end up in the podium?Watch the 2019 season on Horse TV.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="1969">
     <title lang="en">FEI Eventing Nations Cup - Episode 4 - Arville</title>
@@ -25657,7 +25549,7 @@ Edited by: Johan Rosen
     <title lang="en">Longines FEI Nations Cup - 2019 La Baule Competition</title>
     <desc lang="en">La Baule welcomes leaders of the jumping competition at the François André stadium for the first stage of the European Division 1 of the Longines FEI Jumping Nations Cup series. For four days, teams from all nationalities will compete with their teams for the delight of spectators.Watch the full competition of the Longines FEI Nations Cup in La Baule.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928050000" channel="1966">
+  <programme start="20260928000000" stop="20260928050000" channel="1966">
     <title lang="en">LIVE 2026 Professional Women&#x27;s Bowling Association: Albany Regional</title>
     <desc lang="en">Live Coverage of the 2026 Professional Women&#x27;s Bowling Association: Albany Regional</desc>
   </programme>
@@ -25877,7 +25769,7 @@ Edited by: Johan Rosen
     <title lang="en">Bowling TV Archive Series</title>
     <desc lang="en">Anne Marie Duggan, Cheryl Daniels, Sandra Jo Shiery, Jeanne Maiden, Leanne Barrettefrom Fountain Bowl, Fountain Valley, Calif.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928001000" channel="1965">
+  <programme start="20260928000000" stop="20260928001000" channel="1965">
     <title lang="en">WCT 6 USA Championship - E06 - QTR FINALS</title>
     <desc lang="en">World Chase Tag - The most elite chase tag teams in the world have to France to jump, leap, evade and chase their competition to become world champions</desc>
   </programme>
@@ -26125,7 +26017,11 @@ Edited by: Johan Rosen
     <title lang="en">WCT 6 USA Championship - E05 - PLAYOFFS</title>
     <desc lang="en">World Chase Tag - The most elite chase tag teams in the world have to France to jump, leap, evade and chase their competition to become world champions</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000900" channel="1964">
+  <programme start="20260929233100" stop="20260930001900" channel="1965">
+    <title lang="en">WCT 6 USA Championship - E06 - QTR FINALS</title>
+    <desc lang="en">World Chase Tag - The most elite chase tag teams in the world have to France to jump, leap, evade and chase their competition to become world champions</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928000900" channel="1964">
     <title lang="en">SCL 2023 Season 9, Stage 8 - Portugal</title>
     <desc lang="en">We have returned to the powerhouse of Portugal for an edge-of-your-seat galactic battle. If all the planets collided at once, it wouldn’t compare to the bang of this show. Get ready for the battle of the beasts; it’s the heaviest show in the universe, the Strongman Champions League.</desc>
   </programme>
@@ -26317,11 +26213,11 @@ Edited by: Johan Rosen
     <title lang="en">SCL 2015 Season 2, Episode 6, Latvia</title>
     <desc lang="en">Krzysztof Radzikowski, the leader in the league will fight hard to keep Dainis Zageris off from the title and to gather another 25 ranking points in this next stage in Latvia.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233800" channel="1963">
-    <title lang="en">2. Defensa y Justicia vs. Platense 2026 Liga Profesional 2</title>
-    <desc lang="en">Defensa y Justicia le ganó 1-0 a Platense con gol de Martínez</desc>
+  <programme start="20260929235100" stop="20260930005300" channel="1964">
+    <title lang="en">SCL 2015 Season 2, Episode 7, Croatia</title>
+    <desc lang="en">The competition sees a close battle with a new world record in overhead dumbbell and close finishes throughout the day. This stage is in Croatia, in a city over 1700 years old, steeped in Roman tradition and history, the athletes arrive for the truck pull after a picturesque boat ride on the Adriatic Sea.</desc>
   </programme>
-  <programme start="20260927233800" stop="20260928004400" channel="1963">
+  <programme start="20260928000000" stop="20260928004400" channel="1963">
     <title lang="en">1 Instituto vs. San Lorenzo 2026 Liga Profesional 2 </title>
     <desc lang="en">La Gloria venció 1-0 a San Lorenzo en Córdoba </desc>
   </programme>
@@ -26381,11 +26277,7 @@ Edited by: Johan Rosen
     <title lang="en">2 Tigre vs. Barracas Central 2026 Liga Profesional 2 </title>
     <desc lang="en">Empate sin goles en el Coliseo de la Victoria entre Tigre y Barracas</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234000" channel="1962">
-    <title lang="en">Super-Sonia</title>
-    <desc lang="en">Things get a lot more complicated for the team when Sonia puts herself on the business end of a knife.</desc>
-  </programme>
-  <programme start="20260927234000" stop="20260928000700" channel="1962">
+  <programme start="20260928000000" stop="20260928000700" channel="1962">
     <title lang="en">Interview with the Repo Man</title>
     <desc lang="en">The repo team confronts the toughest challenge yet: one-on-one interviews with an anger management specialist.</desc>
   </programme>
@@ -26821,11 +26713,11 @@ Edited by: Johan Rosen
     <title lang="en">That&#x27;s Disrespectful</title>
     <desc lang="en">Sonia, Lyndah weigh options: reclaim burnt car or give up?</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927234500" channel="1960">
-    <title lang="en">Normal Week in Gaming</title>
-    <desc lang="en">Jean-Luc, Kurt and Jake discuss horror games and the possibility of a Nintendo Switch 2 price increase during an unusually eventful week.</desc>
+  <programme start="20260929234500" stop="20260930001100" channel="1962">
+    <title lang="en">Smoke, Lead, and Alcohol</title>
+    <desc lang="en">Matt, Froy face peril in dangerous hood as debtor defends ride.</desc>
   </programme>
-  <programme start="20260927234500" stop="20260928001800" channel="1960">
+  <programme start="20260928000000" stop="20260928001800" channel="1960">
     <title lang="en">The OBLIVION Situation</title>
     <desc lang="en">The GameSpot Show discusses the leaked Elder Scrolls IV: Oblivion remaster and the speculation surrounding it.</desc>
   </programme>
@@ -27261,9 +27153,9 @@ Edited by: Johan Rosen
     <title lang="en">Dev Explains How TMNT</title>
     <desc lang="en">The developer of TMNT: Tactical Takedown explains its older, more reflective version of the Turtles.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2060">
-    <title lang="en">Action Sports Highlights from Above, Episode 2</title>
-    <desc lang="en">Watch these amazing drone videos of action sports ranging from paragliding to rally car racing</desc>
+  <programme start="20260929234400" stop="20260930000500" channel="1960">
+    <title lang="en">First Berserker Khazan</title>
+    <desc lang="en">Souls expert Tamoor Hussain joins Kurt Indovina to explain how The First Berserker: Khazan distinguishes itself through parry-heavy combat.</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="2060">
     <title lang="en">Best of Asia by Drone, Episode 5</title>
@@ -27640,9 +27532,9 @@ Edited by: Johan Rosen
     <title lang="en">Eastern Europe by Drone, Episode 2</title>
     <desc lang="en">Explore the countries of Eastern Europe by drone</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1957">
-    <title lang="en">The Venturesome Couple</title>
-    <desc lang="en">Chris and Martha get a new truck to tow their new Alliance.  What did they get?</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="2060">
+    <title lang="en">Scandinavia from Above , Episode 1</title>
+    <desc lang="en">Explore the northern reaches of Europe with these drone videos from Scandinavia</desc>
   </programme>
   <programme start="20260928000000" stop="20260928003000" channel="1957">
     <title lang="en">The Adventure Bandits Show</title>
@@ -27921,11 +27813,11 @@ Edited by: Johan Rosen
     <title lang="en">Exploring the Black Hills</title>
     <desc lang="en">Let&#x27;s see all the fun with Campfires &amp; Motors</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235900" channel="1956">
-    <title lang="en">Black Power Salute</title>
-    <desc lang="en">Tommie Smith and John Carlos make their famous protest at the 1968 Olympic Games, Gareth Bale scores the greatest Champions League final goal and Kawhi Leonard&#x27;s buzzer-beater is suspended on the edge of the screen.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="1957">
+    <title lang="en">Joy Drive</title>
+    <desc lang="en">In Wyoming, Shari meets Deanna, a woman with ALS. From breakfast to tattoos to BBQ, Deanna shows her what it means to truly live.</desc>
   </programme>
-  <programme start="20260927235900" stop="20260928003000" channel="1956">
+  <programme start="20260928000000" stop="20260928003000" channel="1956">
     <title lang="en">Great Again</title>
     <desc lang="en">After a brief absence of trophies, Spain returned to the summit of European football in 2024.</desc>
   </programme>
@@ -28305,11 +28197,15 @@ Edited by: Johan Rosen
     <title lang="en">Reunion Island St Paul</title>
     <desc lang="en">In the &#x27;Urban Fit Special Guests&#x27; series, travel from Paris to London, via Johannesburg, and meet &quot;Boost&quot; (@mrblockworkout). This 23-year-old former bad boy has created his own fitness training, exclusively using his body and the surrounding urban environment.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235300" channel="1955">
-    <title lang="en">Land, Air, and Sea - Catastrophes in Transit Part Two</title>
-    <desc lang="en">Uncover the harrowing tales behind the most devastating transport disasters in history</desc>
+  <programme start="20260929233000" stop="20260929235900" channel="1956">
+    <title lang="en">Borg &amp; Mcenroe/ Tyson &amp; Holyfield</title>
+    <desc lang="en">Bjorn Borg and John McEnroe have set new standards in men&#x27;s tennis, while Mike Tyson and Evander Holyfield have reached new summits in heavyweight boxing. These two rivalries have created historic tensions.</desc>
   </programme>
-  <programme start="20260927235300" stop="20260928004300" channel="1955">
+  <programme start="20260929235900" stop="20260930003000" channel="1956">
+    <title lang="en">Icons of the Extreme</title>
+    <desc lang="en">We look at the icons of extreme sports. Like cliff diver Rhiannan Iffland, stuntman Evel Knievel, skater Tony Hawk and mountain biker Nino Schurter.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928004300" channel="1955">
     <title lang="en">Heatwaves</title>
     <desc lang="en">Heatwaves kill thousands and may make Earth uninhabitable</desc>
   </programme>
@@ -28571,9 +28467,9 @@ Edited by: Johan Rosen
     <title lang="en">Man Made - Humanity&#x27;s Lessons in Catastrophe Part Two</title>
     <desc lang="en">From the Dust Bowl&#x27;s devastation to Chernobyl&#x27;s nuclear nightmare, dive deep into the harrowing tales of the top 5 man-made disasters that reshaped our world</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="1954">
-    <title lang="en">Beyond the Close</title>
-    <desc lang="en">10 of the country’s top realtors gather to begin a career-defining competition. Guided by a team of all-star business experts, these super-agents will be put to the ultimate test, to prove they have what it takes to rise to the very top and be number one. Follow them Beyond The Close.</desc>
+  <programme start="20260929234500" stop="20260930005000" channel="1955">
+    <title lang="en">Tsunami</title>
+    <desc lang="en">The worst tsunami in recent memory struck the Indonesian island of Sulawesi in 2018</desc>
   </programme>
   <programme start="20260928000000" stop="20260928010000" channel="1954">
     <title lang="en">Beyond the Close</title>
@@ -28919,11 +28815,11 @@ Edited by: Johan Rosen
     <title lang="en">All Stars</title>
     <desc lang="en">The best of the best are back to compete, and Don’s serving up a heaping plate of his signature 10-part PRT. A bear crawl down a mountain, log running and two-point planks are just some of Don’s welcome gauntlet. And the cherry on top—a 5k desert run. But the contestants only have themselves to blame. Because when you’re already amongst the elite, you have to do whatever it takes to find the one who stands above the rest.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233200" channel="1952">
-    <title lang="en">I have Always Wanted To</title>
-    <desc lang="en">Got a bucket list? A dream adventure comes true with an unforgettable dolphin swimming experience.</desc>
+  <programme start="20260929233000" stop="20260930000000" channel="1954">
+    <title lang="en">All Stars</title>
+    <desc lang="en">The CIA has called again, and Don has answered the call on behalf of the A-team. A team of special operatives are needed for a highly classified peace mission that could turn deadly at a moment&#x27;s notice. To spearhead their mission training efforts, the team hits the range with some state-of-the-art SIRT pistols. Then, the gloves are off and the team gets their first course of fire for the season. After the fun course of fire, the team switches gears to knife throwing and fire building, with the help of Top Knives. It’s safe to say, these All-stars aren’t waiting a second.</desc>
   </programme>
-  <programme start="20260927233200" stop="20260928000400" channel="1952">
+  <programme start="20260928000000" stop="20260928000400" channel="1952">
     <title lang="en">The Porto Cathedral, Portugal </title>
     <desc lang="en">Discover the historic Porto Cathedral overlooking the heart of Porto, Portugal.</desc>
   </programme>
@@ -28991,7 +28887,7 @@ Edited by: Johan Rosen
     <title lang="en">Planet Inventory Marquesas Island Polynesia</title>
     <desc lang="en">Journey through the wild and mystical Marquesas Islands, where dramatic volcanic landscapes meet rich Polynesian culture and ancestral heritage.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928010800" channel="1951">
+  <programme start="20260928000000" stop="20260928010800" channel="1951">
     <title lang="en">Day by Day: The Dynasty</title>
     <desc lang="en">The story of the University of Nebraska football program under Tom Osbourne from the 70s through the 90s.</desc>
   </programme>
@@ -29143,7 +29039,11 @@ Edited by: Johan Rosen
     <title lang="en">Wicker Kittens</title>
     <desc lang="en">Top teams in competitive jigsaw puzzling prepare for the largest contest in the country.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000300" channel="1950">
+  <programme start="20260929233500" stop="20260930010200" channel="1951">
+    <title lang="en">Crestone</title>
+    <desc lang="en">In the desert of Crestone, Colorado, a group of SoundCloud rappers live in solitude.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928000300" channel="1950">
     <title lang="en">Security</title>
     <desc lang="en">A security guard protects an eleven year-old girl who is being targeted by a gang for participating</desc>
   </programme>
@@ -29227,11 +29127,7 @@ Edited by: Johan Rosen
     <title lang="en">Season Of The Witch</title>
     <desc lang="en">14th-century knights transport a suspected witch to a monastery, where monks deduce that her powers.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235800" channel="1949">
-    <title lang="en">SciShow</title>
-    <desc lang="en">Discover exciting scientific topics and new discoveries in the ninth episode of SciShow!</desc>
-  </programme>
-  <programme start="20260927235800" stop="20260928003800" channel="1949">
+  <programme start="20260928000000" stop="20260928003800" channel="1949">
     <title lang="en">SciShow</title>
     <desc lang="en">Explore fascinating science topics and breakthroughs in the tenth episode of SciShow!</desc>
   </programme>
@@ -29551,11 +29447,11 @@ Edited by: Johan Rosen
     <title lang="en">The Lightbulb Moment</title>
     <desc lang="en">In the 1920s, real estate boosters turned Florida from a backwater into a popular vacation hotspot.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235300" channel="1947">
-    <title lang="en">Your Move When Life&#x27;s Unfair</title>
-    <desc lang="en">Don&#x27;t let one bad season keep you from pursuing your destiny. God wants to do something new in your life.</desc>
+  <programme start="20260929234200" stop="20260930000900" channel="1949">
+    <title lang="en">The Lightbulb Moment</title>
+    <desc lang="en">In 1856, a chemistry student accidentally created the first synthetic dye, a strange rich purple substance.</desc>
   </programme>
-  <programme start="20260927235300" stop="20260928002600" channel="1947">
+  <programme start="20260928000000" stop="20260928002600" channel="1947">
     <title lang="en">Get Ready For Overflow</title>
     <desc lang="en">You weren&#x27;t meant to just get by. God wants you to have abundance to bless others. Get ready for overflow!</desc>
   </programme>
@@ -29899,7 +29795,11 @@ Edited by: Johan Rosen
     <title lang="en">Don&#x27;t Settle For Good Enough</title>
     <desc lang="en">To many people are living with less than God&#x27;s best. Don&#x27;t settle for good enough, believe God for more.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000400" channel="1945">
+  <programme start="20260929233000" stop="20260930000400" channel="1947">
+    <title lang="en">Easier Than You Think</title>
+    <desc lang="en">God is going before you to arrange things in your favor, making what you can&#x27;t achieve on your own!</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928000400" channel="1945">
     <title lang="en">My Mother Terrifies Me</title>
     <desc lang="en">The way you recall a memory and the way it actually happened might be completely different. The question is, do you know which version feeds you? We can become so wrapped up in our recollections, we convince ourselves of these untruths. Is that person a monster? Were they wishing you harm? Or were they dealing with a difficult situation in the best way they knew how?</desc>
   </programme>
@@ -30195,13 +30095,9 @@ Edited by: Johan Rosen
     <title lang="en">World&#x27;s Greatest Motivators - Les Brown</title>
     <desc lang="en">Les Brown, with cameo appearances by Bob Proctor, David Meltzer, Mary Morrissey and special guest, celebrity boxer and motivator, Sugar Ray Leonard</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927233700" channel="2111">
-    <title lang="en">Half Term from Hell</title>
-    <desc lang="en">Happy Therapy Crouch release day! In this week’s episode Abbey and Peter talk about their rather eventful Easter break spent with their nearest and dearest….as well as their four kids. With Pete pondering why the little ones get such a long time off for Easter when Jesus himself only took 3 days, Abbey lets loose on some of their less-than-wholesome strolls in the park and trips to the beach. During Weekly Whine Club, Pete’s shortcomings on all things technology based are exposed and we hear from one of our listeners whose husband is left rather unimpressed by one of her morning rituals. In Agony Ab, we hear how one of our dear listeners is planning on throwing the wedding of a lifetime with his boyhood passion taking front and centre stage, and what to do when your gut feeling is telling you there is something wrong in the relationship. We hope you enjoy this weeks episode of The Therapy Crouch!</desc>
-  </programme>
-  <programme start="20260927233700" stop="20260928000000" channel="2111">
-    <title lang="en">Guilty Pleasures</title>
-    <desc lang="en">After the ribena-gate of last week, tune in to see if Ralphie made it to a second week in the Crouch family household. This week, the Abbey and Peter are chatting about all things guilty pleasures. After hearing about a recent TikTok trend, Abbey is desperate to stay down with the kids and expose all the things that men secretly love but hate to admit, what could go wrong…..? From their mutual taste in TV and the fact they are both more than partial to a bit of Simply Red, it is safe to say they both have more than their fair share of guilty pleasures they can expose the other one for. As always, you guys have been in touch in search of some advice from the nation’s number 1 Agony AB! Abbey takes the role of hype queen for a woman who has been stuck with a guy suffering from Botox Bias and is on hand to help a young gent who is suffering from a 3 ft 5 neighbour from hell.</desc>
+  <programme start="20260929235400" stop="20260930002600" channel="1945">
+    <title lang="en">Smart Life S1E13</title>
+    <desc lang="en">Flu Season-How to Stay Healthy with Dr. Yvonne Johnson, When to Go to the ER with Dr. Yvonne Johnson, Scoliosis in Teens with Dr. Stephen George of Nicklaus Children&#x27;s Hospital</desc>
   </programme>
   <programme start="20260928000000" stop="20260928011000" channel="2111">
     <title lang="en">Glastonbury....Part 1</title>
@@ -30429,9 +30325,9 @@ If you want your question read out on the pod, hit the link below</desc>
     <title lang="en">The Therapy Crouch - I WANT BONO</title>
     <desc lang="en">On today’s episode, Abbey and Peter shed light on all the things they have in common, from nights in watching boxsets to nights out on the tiles.... and even their taste in men. The pair also bond over their shared appreciation for all things Bono and Barry from Eastenders. In the Weekly Whine Club, we learn why having a Victoria Secret’s model as a wife may not be as glamorous as it sounds and, rather ironically, that poor punctuality is one of Abbey’s pet hates. In Agony Ab, we go international and provide assistance to some of our Spanish listeners and Pete gives tips on how to keep to spice alive (spoiler: it does not involve dressing up as a viking)</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928000000" channel="2112">
-    <title lang="en">That Peter Crouch Podcast</title>
-    <desc lang="en">Peter Crouch reveals all the things that footballers, managers and coaches discuss at a team meeting... You&#x27;ll learn about which managers dominate the room, the softer tactics employed by others and what happens when the gaffer loses the dressing room?! Chris Stark and Statman Dave discuss more ideas for Crouchfest and Crouchy reveals why David Beckham holds a special place in his bedroom...</desc>
+  <programme start="20260929234300" stop="20260930000000" channel="2111">
+    <title lang="en">The Sidwell’s: Steve and Krysy Sidwell on Marriage, Teenage Tear-Ups and Book Club Blunders</title>
+    <desc lang="en">On today’s episode of The Therapy Crouch, Abbey and Peter are joined by some of their oldest and closest friends - Steve and Krysy Sidwell. In a friendship spanning two decades which has seen the couples share career paths, holidays and some outrageous nights out, this podcast is full of laughs and a behind the curtain, sneak peak into what it’s like being best friends with your favourite pair of podcasters! Steve and Krysy discuss what they think has made their 20 year marriage stay rock solid after all these years and how they are navigating having three teenage boys who have developed of penchant for knocking seven bells of sh*t out of each other on a regular basis. In the Agony Ab section, we hear from a listener who has some concerns about his wife’s recent fashion choices as well what to do in the awkward situation when someone likes you more than you like them - so stay tuned for that!! Enjoy this week’s Therapy Crouch!</desc>
   </programme>
   <programme start="20260928000000" stop="20260928012100" channel="2112">
     <title lang="en">That Peter Crouch Podcast</title>
@@ -30649,11 +30545,7 @@ If you want your question read out on the pod, hit the link below</desc>
     <title lang="en">Abbey Clancy Reveals Peter’s Cheesy Chat Up Lines That Actually Worked!</title>
     <desc lang="en">Love is certainly in the air on today’s episode of the Therapy Crouch, as Abbey and Peter are celebrating all things Valentine’s day. We hear some of their best - and worst - chat up lines used to charm one another and Abbey gives the lowdown on what songs will be making it on to her bonk beats playlist this Wednesday. Abbey and Peter are also on hand to give advice to those of you who are feeling a little bit neglected this time of year as well as what to do if you ever find yourself dating someone whose name gives you the ICK. And fear not singletons, we also have some words of wisdom for those of you who don’t have a date this year and find your legs dangling off the single shelf. Enjoy this week’s Therapy Crouch!</desc>
   </programme>
-  <programme start="20260927233000" stop="20260927235600" channel="2113">
-    <title lang="en">WORLD OF FREESPORTS 2020</title>
-    <desc lang="en">Dies ist eine Reise zur Seidenstraße in Zentralasien in die abenteuerliche Welt des Kanufahrens. Die Muksu in Tadschikistan ist eine der drei schwersten Stromschnellen hier. Einmal im Fluss eingetaucht, gibt es kein Zurück mehr.</desc>
-  </programme>
-  <programme start="20260927235600" stop="20260928001400" channel="2113">
+  <programme start="20260928000000" stop="20260928001400" channel="2113">
     <title lang="en">Copa Kitley GKA Freestyle Kite World Cup 2024 – Cauipe (BRA) – Overall Highlights</title>
     <desc lang="en">Die Qatar Airways GKA Kite World Tour 2024 wird den zweiten Stopp der Freestyle-Disziplin in Cauipe im Nordosten Brasiliens ausrichten. Der Copa Kitley GKA Freestyle Kite World Cup bietet intensive Wettkämpfe in den flachen Gewässern.</desc>
   </programme>
@@ -30941,148 +30833,152 @@ Kaschmir, Indien, beherbergt einige der spektakulärsten und mystischsten Berge 
     <title lang="en">WOF Evergreens</title>
     <desc lang="en">Aurelien Routens aus Frankreich war Vizeweltmeister bei der Freeride World Tour 2013 und hat sich mit seiner herausragenden Webserie „Carpe Diem“ einen Namen gemacht. In unserem 26-minütigen Porträt spricht der 36-Jährige über sein Leben als Snowboard-Profi.</desc>
   </programme>
-  <programme start="20260927233000" stop="20260928003000" channel="2028">
+  <programme start="20260929234300" stop="20260930001400" channel="2113">
+    <title lang="en">Vendée Globe 2024</title>
+    <desc lang="en">Die Vendée Globe will die Medienwirksamkeit der Veranstaltung nutzen, um die Öffentlichkeit während der Weltumsegelung für den Schutz der Meere zu sensibilisieren. Sie sind unmittelbare Zeugen der sich vollziehenden Veränderungen, insbesondere in der Antarktis.</desc>
+  </programme>
+  <programme start="20260928000000" stop="20260928010000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928003000" stop="20260928013000" channel="2028">
+  <programme start="20260928010000" stop="20260928020000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928013000" stop="20260928023000" channel="2028">
+  <programme start="20260928020000" stop="20260928030000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928023000" stop="20260928033000" channel="2028">
+  <programme start="20260928030000" stop="20260928040000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928033000" stop="20260928043000" channel="2028">
+  <programme start="20260928040000" stop="20260928050000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928043000" stop="20260928053000" channel="2028">
+  <programme start="20260928050000" stop="20260928060000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928053000" stop="20260928063000" channel="2028">
+  <programme start="20260928060000" stop="20260928070000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928063000" stop="20260928073000" channel="2028">
+  <programme start="20260928070000" stop="20260928080000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928073000" stop="20260928083000" channel="2028">
+  <programme start="20260928080000" stop="20260928090000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928083000" stop="20260928093000" channel="2028">
+  <programme start="20260928090000" stop="20260928100000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928093000" stop="20260928103000" channel="2028">
+  <programme start="20260928100000" stop="20260928110000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928103000" stop="20260928113000" channel="2028">
+  <programme start="20260928110000" stop="20260928120000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928113000" stop="20260928123000" channel="2028">
+  <programme start="20260928120000" stop="20260928130000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928123000" stop="20260928133000" channel="2028">
+  <programme start="20260928130000" stop="20260928140000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928133000" stop="20260928143000" channel="2028">
+  <programme start="20260928140000" stop="20260928150000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928143000" stop="20260928153000" channel="2028">
+  <programme start="20260928150000" stop="20260928160000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928153000" stop="20260928163000" channel="2028">
+  <programme start="20260928160000" stop="20260928170000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928163000" stop="20260928173000" channel="2028">
+  <programme start="20260928170000" stop="20260928180000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928173000" stop="20260928183000" channel="2028">
+  <programme start="20260928180000" stop="20260928190000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928183000" stop="20260928193000" channel="2028">
+  <programme start="20260928190000" stop="20260928200000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928193000" stop="20260928203000" channel="2028">
+  <programme start="20260928200000" stop="20260928210000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928203000" stop="20260928213000" channel="2028">
+  <programme start="20260928210000" stop="20260928220000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928213000" stop="20260928223000" channel="2028">
+  <programme start="20260928220000" stop="20260928230000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928223000" stop="20260928233000" channel="2028">
+  <programme start="20260928230000" stop="20260929000000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260928233000" stop="20260929003000" channel="2028">
+  <programme start="20260929000000" stop="20260929010000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929003000" stop="20260929013000" channel="2028">
+  <programme start="20260929010000" stop="20260929020000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929013000" stop="20260929023000" channel="2028">
+  <programme start="20260929020000" stop="20260929030000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929023000" stop="20260929033000" channel="2028">
+  <programme start="20260929030000" stop="20260929040000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929033000" stop="20260929043000" channel="2028">
+  <programme start="20260929040000" stop="20260929050000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929043000" stop="20260929053000" channel="2028">
+  <programme start="20260929050000" stop="20260929060000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929053000" stop="20260929063000" channel="2028">
+  <programme start="20260929060000" stop="20260929070000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929063000" stop="20260929073000" channel="2028">
+  <programme start="20260929070000" stop="20260929080000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929073000" stop="20260929083000" channel="2028">
+  <programme start="20260929080000" stop="20260929090000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929083000" stop="20260929093000" channel="2028">
+  <programme start="20260929090000" stop="20260929100000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929093000" stop="20260929103000" channel="2028">
+  <programme start="20260929100000" stop="20260929110000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929103000" stop="20260929113000" channel="2028">
+  <programme start="20260929110000" stop="20260929120000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929113000" stop="20260929123000" channel="2028">
+  <programme start="20260929120000" stop="20260929130000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929123000" stop="20260929133000" channel="2028">
+  <programme start="20260929130000" stop="20260929140000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929133000" stop="20260929143000" channel="2028">
+  <programme start="20260929140000" stop="20260929150000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929143000" stop="20260929153000" channel="2028">
+  <programme start="20260929150000" stop="20260929160000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929153000" stop="20260929163000" channel="2028">
+  <programme start="20260929160000" stop="20260929170000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929163000" stop="20260929173000" channel="2028">
+  <programme start="20260929170000" stop="20260929180000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929173000" stop="20260929183000" channel="2028">
+  <programme start="20260929180000" stop="20260929190000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929183000" stop="20260929193000" channel="2028">
+  <programme start="20260929190000" stop="20260929200000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929193000" stop="20260929203000" channel="2028">
+  <programme start="20260929200000" stop="20260929210000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929203000" stop="20260929213000" channel="2028">
+  <programme start="20260929210000" stop="20260929220000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929213000" stop="20260929223000" channel="2028">
+  <programme start="20260929220000" stop="20260929230000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
-  <programme start="20260929223000" stop="20260929233000" channel="2028">
+  <programme start="20260929230000" stop="20260930000000" channel="2028">
     <title lang="en">MVMT Culture</title>
   </programme>
 </tv>
