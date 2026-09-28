@@ -31,62 +31,60 @@ def authenticate_guest():
         return None
 
 def generate_playlist():
-    # 1. Dapatkan token secara dinamis lewat autentikasi
     token = authenticate_guest()
     if not token:
         print("Tidak dapat melanjutkan pembuatan playlist karena token gagal didapatkan.")
         return
 
-    # Endpoint home atau daftar channel (disesuaikan dengan v1/v2 API Gizmott)
-    url = "https://api.gizmott.com/api/v2/home"
     headers = {
         "accept": "application/json, text/plain, */*",
         "access-token": token,
         "pubid": "50183",
         "channelid": "516",
         "country_code": "ID",
+        "crossorigin": "true",
+        "dev_id": "5d01d64ac5b0026957052f0330129fc6",
         "device_type": "web",
+        "uid": "7938114",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
     }
     
-    try:
-        response = requests.get(url, headers=headers)
-        data = response.json()
-        
-        m3u_content = "#EXTM3U\n"
-        
-        # Ekstraksi data berdasarkan struktur JSON API
-        sections = data.get("data", [])
-        if not sections and isinstance(data, list):
-            sections = data
+    m3u_content = "#EXTM3U\n"
+    channel_count = 0
+    
+    # Contoh melakukan iterasi pada ID channel (misalnya rentang ID dari 1990 sampai 2025 atau sesuai ID channel Anda)
+    # Anda bisa menyesuaikan daftar ID channel aktif di sini
+    print("Mengambil data channel...")
+    for ch_id in range(1995, 2025):
+        detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
+        try:
+            response = requests.get(detail_url, headers=headers)
+            if response.status_code == 200:
+                res_data = response.json()
+                data_list = res_data.get("data", [])
+                
+                if data_list and isinstance(data_list, list):
+                    ch = data_list[0]
+                    name = ch.get("channel_name", "Unknown")
+                    logo = ch.get("logo", "")
+                    stream_url = ch.get("live_link", "") # Mengambil live_link .m3u8
+                    
+                    # Ambil kategori pertama jika ada
+                    categories = ch.get("categories", [])
+                    group = categories[0].get("category_name", "Sports") if categories else "Sports"
+                    
+                    if stream_url:
+                        m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
+                        m3u_content += f'{stream_url}\n'
+                        channel_count += 1
+                        print(iklan := f"Berhasil menambahkan: {name}")
+        except Exception as e:
+            continue
 
-        channel_count = 0
-        for section in sections:
-            channels = section.get("channels", [])
-            for ch in channels:
-                name = ch.get("channel_name", "Unknown")
-                logo = ch.get("channel_image", "")
-                stream_url = ch.get("stream_url", "")
-                group = ch.get("genre_name", "Sports")
-                
-                # Jika stream_url kosong di home, Anda bisa mengambil detail via ID channel (contoh: ch.get("channel_id"))
-                if not stream_url and "channel_id" in ch:
-                    # Optional: Fetch detail jika stream_url tidak langsung tersedia di response home
-                    ch_id = ch.get("channel_id")
-                    stream_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}" # atau parsing endpoint amagi
-                
-                if stream_url:
-                    m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
-                    m3u_content += f'{stream_url}\n'
-                    channel_count += 1
-                
-        with open("playlist.m3u", "w", encoding="utf-8") as f:
-            f.write(m3u_content)
-            
-        print(f"Playlist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
+    with open("playlist.m3u", "w", encoding="utf-8") as f:
+        f.write(m3u_content)
         
-    except Exception as e:
-        print(f"Error generating playlist: {e}")
+    print(f"Playlist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
 
 if __name__ == "__main__":
-    generate_playlist()
+    generate_generate = generate_playlist()
