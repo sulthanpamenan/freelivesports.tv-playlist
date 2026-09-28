@@ -1,8 +1,7 @@
 import requests
-from datetime import datetime, timedelta
 
 def authenticate_guest():
-    """Perform guest authentication to obtain a valid access token."""
+    """Melakukan autentikasi tamu untuk mendapatkan token akses yang valid."""
     auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
     headers = {
         "accept": "application/json, text/plain, */*",
@@ -22,16 +21,16 @@ def authenticate_guest():
         if response.status_code == 200:
             data = response.json()
             token = data.get("token")
-            print("EPG authentication successful!")
+            print("Autentikasi berhasil!")
             return token
     except Exception as e:
-        print(f"Error during EPG authentication: {e}")
+        print(f"Error saat autentikasi: {e}")
     return None
 
-def generate_epg():
+def generate_playlist():
     token = authenticate_guest()
     if not token:
-        print("Cannot proceed with EPG generation because the token could not be obtained.")
+        print("Tidak dapat melanjutkan pembuatan playlist karena token gagal didapatkan.")
         return
 
     headers = {
@@ -46,18 +45,14 @@ def generate_epg():
         "uid": "7938114",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
     }
-
+    
+    m3u_content = "#EXTM3U\n"
     added_channels = set()
-    channels_xml = ""
-    programmes_xml = ""
+    channel_count = 0
 
-    now = datetime.utcnow()
-    start_time = (now - timedelta(days=1)).strftime('%Y%m%d%H%M%S +0000')
-    stop_time = (now + timedelta(days=3)).strftime('%Y%m%d%H%M%S +0000')
-
-    # 1. Take from the master list
+    # 1. Ambil dari endpoint master fastchannel list yang baru ditemukan
     list_url = "https://api.gizmott.com/api/v1/fastchannel/list"
-    print("Retrieving channel data for the EPG from the master list...")
+    print("Mengambil data dari endpoint master fastchannel list...")
     try:
         res = requests.get(list_url, headers=headers)
         if res.status_code == 200:
@@ -72,7 +67,10 @@ def generate_epg():
                     continue
                 
                 name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or "Unknown"
+                logo = ch.get("logo_thumb", "") or ch.get("hero_image", "") or ch.get("logo", "")
+                group_name = ch.get("category_name", "Live Sports")
                 
+                # Ambil stream URL via detail endpoint
                 stream_url = ""
                 detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
                 try:
@@ -88,28 +86,22 @@ def generate_epg():
 
                 if stream_url:
                     added_channels.add(ch_id_str)
-                    
-                    # channel element
-                    channels_xml += f'  <channel id="{ch_id_str}">\n'
-                    channels_xml += f'    <display-name lang="en">{name}</display-name>\n'
-                    channels_xml += f'  </channel>\n'
-                    
-                    # default/live program
-                    programmes_xml += f'  <programme start="{start_time}" stop="{stop_time}" channel="{ch_id_str}">\n'
-                    programmes_xml += f'    <title lang="en">{name} - Live Stream</title>\n'
-                    programmes_xml += f'    <desc lang="en">Enjoy continuous live streaming and broadcasting on {name}.</desc>\n'
-                    programmes_xml += f'  </programme>\n'
+                    m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
+                    m3u_content += f'{stream_url}\n'
+                    channel_count += 1
+                    print(f"Berhasil menambahkan (Master List): {name}")
     except Exception as e:
-        print(f"Error retrieving master list for EPG: {e}")
+        print(f"Error mengambil master list: {e}")
 
-    # 2. Go to the home screen to synchronize backups
+    # 2. Fallback / Cadangan: Ambil juga dari endpoint beranda (/api/v2/home) untuk mencakup channel tambahan jika ada yang terlewat
     home_url = "https://api.gizmott.com/api/v2/home"
-    print("Checking additional homepage data for EPG...")
+    print("\nMemeriksa tambahan data dari beranda utama...")
     try:
         response = requests.get(home_url, headers=headers)
         if response.status_code == 200:
             sections = response.json().get("data", [])
             for section in sections:
+                group_name = section.get("category_name", "Sports")
                 shows = section.get("shows", [])
                 for ch in shows:
                     ch_id = ch.get("channel_id")
@@ -121,14 +113,14 @@ def generate_epg():
                         continue
                     
                     name = ch.get("show_name", "Unknown")
+                    logo = ch.get("logo_thumb", "") or ch.get("hero_image", "")
                     
                     stream_url = ""
                     detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
                     try:
                         detail_res = requests.get(detail_url, headers=headers)
                         if detail_res.status_code == 200:
-                            detail_json = detail_res.json()
-                            detail_data = detail_json.get("data", [])
+                            detail_data = detail_res.json().get("data", [])
                             if isinstance(detail_data, list) and detail_data:
                                 stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
                             elif isinstance(detail_data, dict):
@@ -138,25 +130,18 @@ def generate_epg():
 
                     if stream_url:
                         added_channels.add(ch_id_str)
-                        
-                        channels_xml += f'  <channel id="{ch_id_str}">\n'
-                        channels_xml += f'    <display-name lang="en">{name}</display-name>\n'
-                        channels_xml += f'  </channel>\n'
-                        
-                        programmes_xml += f'  <programme start="{start_time}" stop="{stop_time}" channel="{ch_id_str}">\n'
-                        programmes_xml += f'    <title lang="en">{name} - Live Stream</title>\n'
-                        programmes_xml += f'    <desc lang="en">Enjoy continuous live streaming and broadcasting on {name}.</desc>\n'
-                        programmes_xml += f'  </programme>\n'
+                        m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
+                        m3u_content += f'{stream_url}\n'
+                        channel_count += 1
+                        print(f"Berhasil menambahkan (Beranda): {name} (Kategori: {group_name})")
     except Exception as e:
-        print(f"Error mengambil data beranda untuk EPG: {e}")
+        print(f"Error mengambil data beranda: {e}")
 
-    # Combine the entire XML structure
-    full_xml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n' + channels_xml + programmes_xml + '</tv>'
-
-    with open("epg.xml", "w", encoding="utf-8") as f:
-        f.write(full_xml)
+    # Simpan ke file M3U
+    with open("playlist.m3u", "w", encoding="utf-8") as f:
+        f.write(m3u_content)
         
-    print(f"\nFile epg.xml berhasil di-generate! Total {len(added_channels)} channel dengan program EPG yang sinkron.")
+    print(f"\nPlaylist final berhasil di-generate! Total {channel_count} channel unik dimasukkan ke playlist.m3u")
 
 if __name__ == "__main__":
-    generate_epg()
+    generate_playlist()
