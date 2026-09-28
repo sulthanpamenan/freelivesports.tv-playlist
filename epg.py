@@ -6,7 +6,6 @@ import requests
 def generate_epg():
     url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
     
-    # Disarankan menggunakan environment variable, fallback ke token Anda saat ini
     access_token = os.getenv("GIZMOTT_ACCESS_TOKEN", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwicHViaWQiOiI1MDE4MyIsInVpZCI6Ijc5MzgxMTQiLCJjb3VudHJ5X2NvZGUiOiJJIDIsImRldmljZV90eXBlIjoid2ViIiwiaWF0IjoxNzkwNSExNDE1LCJleHAiOjE3OTgyODc0MTV9.3yF9I5p_Y7m2YZZ-bYQkTxkmzR_uFhCfPwVSALIDDdw")
 
     headers = {
@@ -17,7 +16,6 @@ def generate_epg():
     }
 
     try:
-        # Menambahkan timeout 15 detik agar skrip tidak hang jika server lambat
         response = requests.get(url, headers=headers, timeout=15)
         
         if response.status_code != 200:
@@ -25,59 +23,68 @@ def generate_epg():
             return
 
         res_json = response.json()
-        schedules = res_json.get("data", {}).get("schedules", [])
+        channels_data = res_json.get("data", {}).get("schedules", [])
 
-        if not isinstance(schedules, list):
-            print("Format data jadwal (schedules) dari API tidak valid.")
+        if not isinstance(channels_data, list):
+            print("Format data jadwal dari API tidak valid.")
             return
 
         channels_map = {}
         valid_programmes = []
 
-        for item in schedules:
-            if not isinstance(item, dict):
+        for channel_item in channels_data:
+            if not isinstance(channel_item, dict):
                 continue
                 
-            channel_id = str(item.get("channel_id", "channel"))
-            title = item.get("title", "Live Event")
-            desc = item.get("description", "")
+            # Ambil ID dan Nama Channel
+            channel_id = str(channel_item.get("channel_id") or channel_item.get("id") or "channel")
+            channel_name = (
+                channel_item.get("channel_name")
+                or channel_item.get("name")
+                or f"Channel {channel_id}"
+            )
+            channels_map[channel_id] = channel_name
 
-            if not desc or desc.strip().lower() in ["none", "null"]:
-                desc = ""
+            # Ambil daftar program di dalam channel (mendukung key 'schedules', 'programs', atau 'events')
+            progs = channel_item.get("schedules") or channel_item.get("programs") or channel_item.get("events")
+            
+            # Fallback jika struktur dari API ternyata berupa list program datar
+            if not progs:
+                progs = [channel_item]
 
-            start = item.get("start", "")
-            stop = item.get("end", "")
-
-            try:
-                dt_start = datetime.fromisoformat(start.replace("Z", "+00:00"))
-                dt_stop = datetime.fromisoformat(stop.replace("Z", "+00:00"))
-
-                if dt_stop <= dt_start:
+            for item in progs:
+                if not isinstance(item, dict):
                     continue
 
-                start_fmt = dt_start.strftime("%Y%m%d%H%M%S %z").strip()
-                stop_fmt = dt_stop.strftime("%Y%m%d%H%M%S %z").strip()
-            except Exception:
-                # Fallback jika format ISO gagal diparsing
-                start_fmt = start
-                stop_fmt = stop
+                title = item.get("title", "Live Event")
+                desc = item.get("description", "")
 
-            # Mapping nama channel
-            if channel_id not in channels_map:
-                channel_name = (
-                    item.get("channel_name")
-                    or item.get("name")
-                    or f"Channel {channel_id}"
-                )
-                channels_map[channel_id] = channel_name
+                if not desc or desc.strip().lower() in ["none", "null"]:
+                    desc = ""
 
-            valid_programmes.append({
-                "channel": channel_id,
-                "start": start_fmt,
-                "stop": stop_fmt,
-                "title": html.escape(str(title)),
-                "desc": html.escape(str(desc)),
-            })
+                start = item.get("start", "")
+                stop = item.get("end", "")
+
+                try:
+                    dt_start = datetime.fromisoformat(start.replace("Z", "+00:00"))
+                    dt_stop = datetime.fromisoformat(stop.replace("Z", "+00:00"))
+
+                    if dt_stop <= dt_start:
+                        continue
+
+                    start_fmt = dt_start.strftime("%Y%m%d%H%M%S %z").strip()
+                    stop_fmt = dt_stop.strftime("%Y%m%d%H%M%S %z").strip()
+                except Exception:
+                    start_fmt = start
+                    stop_fmt = stop
+
+                valid_programmes.append({
+                    "channel": channel_id,
+                    "start": start_fmt,
+                    "stop": stop_fmt,
+                    "title": html.escape(str(title)),
+                    "desc": html.escape(str(desc)),
+                })
 
         # Proses penulisan file XMLTV
         with open("epg.xml", "w", encoding="utf-8") as f:
@@ -100,7 +107,7 @@ def generate_epg():
 
             f.write("</tv>\n")
 
-        print("File EPG XMLTV berhasil dibuat dan di optimisasi!")
+        print(f"Berhasil! Total Channel: {len(channels_map)}, Total Program: {len(valid_programmes)}")
 
     except requests.exceptions.Timeout:
         print("Error: Koneksi ke API Gizmott timeout (waktu habis).")
