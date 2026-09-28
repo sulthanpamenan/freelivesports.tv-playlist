@@ -3,6 +3,10 @@ from urllib.parse import parse_qs, urlparse
 
 session = requests.Session()
 
+# --- CHANNEL EXCLUSIONS (BLACKLIST) ---
+EXCLUDED_IDS = {""}
+EXCLUDED_NAMES = {""}
+
 def authenticate_guest():
     """Perform guest authentication to obtain a valid access token."""
     auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
@@ -104,10 +108,18 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                     continue
                 
                 ch_id_str = str(ch_id)
+                
+                if ch_id_str in EXCLUDED_IDS:
+                    continue
+
+                name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or "Unknown"
+                
+                if name in EXCLUDED_NAMES:
+                    continue
+
                 if ch_id_str in added_channels:
                     continue
                 
-                name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or "Unknown"
                 logo = ch.get("logo_thumb", "") or ch.get("hero_image", "") or ch.get("logo", "")
                 
                 stream_url = ""
@@ -157,10 +169,18 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                         continue
                     
                     ch_id_str = str(ch_id)
+                    
+                    if ch_id_str in EXCLUDED_IDS:
+                        continue
+
+                    name = ch.get("show_name", "Unknown")
+                    
+                    if name in EXCLUDED_NAMES:
+                        continue
+
                     if ch_id_str in added_channels:
                         continue
                     
-                    name = ch.get("show_name", "Unknown")
                     logo = ch.get("logo_thumb", "") or ch.get("hero_image", "")
                     
                     stream_url = ""
