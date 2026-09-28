@@ -49,44 +49,63 @@ def generate_playlist():
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
     }
     
-    m3u_content = "#EXTM3U\n"
-    channel_count = 0
+    # Menggunakan endpoint home untuk mengambil seluruh data kategori & channel secara dinamis
+    home_url = "https://api.gizmott.com/api/v2/home"
     
-    print("Mengambil data channel...")
-    for ch_id in range(1940, 2050):
-        detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
-        try:
-            response = requests.get(detail_url, headers=headers)
-            if response.status_code == 200:
-                res_data = response.json()
-                data_list = res_data.get("data", [])
+    print("Mengambil seluruh data channel dari beranda...")
+    try:
+        response = requests.get(home_url, headers=headers)
+        if response.status_code != 200:
+            print(f"Gagal mengambil data beranda: Status {response.status_code}")
+            return
+            
+        res_json = response.json()
+        sections = res_json.get("data", [])
+        
+        m3u_content = "#EXTM3U\n"
+        channel_count = 0
+        added_channels = set() # Untuk mencegah duplikasi channel jika muncul di section berbeda
+
+        for section in sections:
+            # Mengambil nama kategori sebagai group-title otomatis
+            group_name = section.get("menu_name", "Sports")
+            channels = section.get("channels", [])
+            
+            for ch in channels:
+                ch_id = str(ch.get("channel_id", ""))
+                name = ch.get("channel_name", "Unknown")
+                logo = ch.get("channel_image", "") or ch.get("logo", "")
+                stream_url = ch.get("stream_url", "") or ch.get("live_link", "")
                 
-                if data_list and isinstance(data_list, list):
-                    ch = data_list[0]
-                    name = ch.get("channel_name", "Unknown")
-                    logo = ch.get("logo", "")
-                    stream_url = ch.get("live_link", "")
-                    
-                    # Mengambil kategori asli channel secara otomatis
-                    categories = ch.get("categories", [])
-                    group = categories[0].get("category_name", "General") if categories else "General"
-                    
-                    # Atribut EPG tvg-id dan tvg-name
-                    tvg_id = str(ch.get("channel_id", ch_id))
+                # Jika stream_url kosong, ambil via detail endpoint menggunakan channel_id
+                if not stream_url and ch_id:
+                    detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
+                    try:
+                        detail_res = requests.get(detail_url, headers=headers)
+                        if detail_res.status_code == 200:
+                            detail_data = detail_res.json().get("data", [])
+                            if detail_data:
+                                stream_url = detail_data[0].get("live_link", "")
+                    except Exception:
+                        pass
+
+                if stream_url and ch_id not in added_channels:
+                    added_channels.add(ch_id)
+                    tvg_id = ch_id
                     tvg_name = name
                     
-                    if stream_url:
-                        m3u_content += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group}",{name}\n'
-                        m3u_content += f'{stream_url}\n'
-                        channel_count += 1
-                        print(f"Berhasil menambahkan: {name} [{group}]")
-        except Exception as e:
-            continue
+                    m3u_content += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
+                    m3u_content += f'{stream_url}\n'
+                    channel_count += 1
+                    print(f"Berhasil menambahkan: {name} (Kategori: {group_name})")
 
-    with open("playlist.m3u", "w", encoding="utf-8") as f:
-        f.write(m3u_content)
-        
-    print(f"Playlist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
+        with open("playlist.m3u", "w", encoding="utf-8") as f:
+            f.write(m3u_content)
+            
+        print(f"\nPlaylist berhasil di-generate! Total {channel_count} channel unik dimasukkan ke playlist.m3u")
+
+    except Exception as e:
+        print(f"Terjadi kesalahan saat mengambil playlist: {e}")
 
 if __name__ == "__main__":
     generate_playlist()
