@@ -31,23 +31,18 @@ def authenticate_guest():
     return None
 
 def parse_time_to_xmltv(time_str):
-    """Parses ISO time string and converts it to Asia/Jakarta timezone format for XMLTV."""
+    """Parses ISO time string from API (already in Asia/Jakarta local time) and formats for XMLTV."""
     if not time_str:
         return ""
     try:
-        clean_str = time_str.strip().replace("Z", "+00:00")
+        clean_str = time_str.strip().replace("Z", "")
         dt = datetime.fromisoformat(clean_str)
         
-        if dt.tzinfo is None:
-            if ZoneInfo:
-                dt = dt.replace(tzinfo=ZoneInfo("UTC"))
-            else:
-                dt = dt.replace(tzinfo=None)
-        
         if ZoneInfo:
-            dt = dt.astimezone(ZoneInfo("Asia/Jakarta"))
-            
-        return dt.strftime("%Y%m%d%H%M%S %z").strip()
+            dt = dt.replace(tzinfo=ZoneInfo("Asia/Jakarta"))
+            return dt.strftime("%Y%m%d%H%M%S %z").strip()
+        else:
+            return dt.strftime("%Y%m%d%H%M%S") + " +0700"
     except Exception:
         return time_str
 
