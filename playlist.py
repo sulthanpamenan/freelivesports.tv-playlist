@@ -49,7 +49,6 @@ def generate_playlist():
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
     }
     
-    # Menggunakan endpoint home untuk mengambil seluruh data kategori & channel secara dinamis
     home_url = "https://api.gizmott.com/api/v2/home"
     
     print("Mengambil seluruh data channel dari beranda...")
@@ -64,34 +63,41 @@ def generate_playlist():
         
         m3u_content = "#EXTM3U\n"
         channel_count = 0
-        added_channels = set() # Untuk mencegah duplikasi channel jika muncul di section berbeda
+        added_channels = set() # Mencegah duplikasi channel
 
         for section in sections:
-            # Mengambil nama kategori sebagai group-title otomatis
-            group_name = section.get("menu_name", "Sports")
-            channels = section.get("channels", [])
+            group_name = section.get("category_name", "Sports")
+            shows = section.get("shows", [])
             
-            for ch in channels:
-                ch_id = str(ch.get("channel_id", ""))
-                name = ch.get("channel_name", "Unknown")
-                logo = ch.get("channel_image", "") or ch.get("logo", "")
-                stream_url = ch.get("stream_url", "") or ch.get("live_link", "")
+            for ch in shows:
+                # Lewati jika item bukan channel live (channel_id bernilai null atau tidak ada)
+                ch_id = ch.get("channel_id")
+                if not ch_id:
+                    continue
                 
-                # Jika stream_url kosong, ambil via detail endpoint menggunakan channel_id
-                if not stream_url and ch_id:
-                    detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
+                ch_id_str = str(ch_id)
+                name = ch.get("show_name", "Unknown")
+                logo = ch.get("logo_thumb", "") or ch.get("hero_image", "")
+                
+                stream_url = ""
+                # Ambil stream_url melalui endpoint detail berdasarkan channel_id
+                if ch_id_str:
+                    detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
                     try:
                         detail_res = requests.get(detail_url, headers=headers)
                         if detail_res.status_code == 200:
-                            detail_data = detail_res.json().get("data", [])
-                            if detail_data:
-                                stream_url = detail_data[0].get("live_link", "")
+                            detail_json = detail_res.json()
+                            detail_data = detail_json.get("data", [])
+                            if isinstance(detail_data, list) and detail_data:
+                                stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
+                            elif isinstance(detail_data, dict):
+                                stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
                     except Exception:
                         pass
 
-                if stream_url and ch_id not in added_channels:
-                    added_channels.add(ch_id)
-                    tvg_id = ch_id
+                if stream_url and ch_id_str not in added_channels:
+                    added_channels.add(ch_id_str)
+                    tvg_id = ch_id_str
                     tvg_name = name
                     
                     m3u_content += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
