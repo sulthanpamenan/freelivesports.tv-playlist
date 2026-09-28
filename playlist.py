@@ -1,4 +1,5 @@
 import requests
+from urllib.parse import parse_qs, urlparse
 
 def authenticate_guest():
     """Melakukan autentikasi tamu untuk mendapatkan token akses yang valid."""
@@ -30,6 +31,27 @@ def authenticate_guest():
         print(f"Error saat autentikasi: {e}")
         return None
 
+def extract_genre_from_url(url):
+    """Mengekstrak genre dari parameter URL stream (.m3u8) jika tersedia."""
+    try:
+        parsed_url = urlparse(url)
+        query_params = parse_qs(parsed_url.query)
+        
+        # Cek berbagai kemungkinan nama parameter genre di URL
+        for key in ["content_genre", "ads.content_genre", "genre"]:
+            if key in query_params and query_params[key]:
+                genres = query_params[key][0].split(",")
+                if genres and genres[0]:
+                    # Cari genre spesifik (hindari kata umum seperti 'Sport' atau 'Sports')
+                    for g in genres:
+                        clean_g = g.strip()
+                        if clean_g.lower() not in ["sport", "sports"]:
+                            return clean_g
+                    return genres[0].strip()
+    except Exception:
+        pass
+    return None
+
 def generate_playlist():
     token = authenticate_guest()
     if not token:
@@ -52,8 +74,6 @@ def generate_playlist():
     m3u_content = "#EXTM3U\n"
     channel_count = 0
     
-    # Contoh melakukan iterasi pada ID channel (misalnya rentang ID dari 1990 sampai 2025 atau sesuai ID channel Anda)
-    # Anda bisa menyesuaikan daftar ID channel aktif di sini
     print("Mengambil data channel...")
     for ch_id in range(1995, 2025):
         detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
@@ -69,22 +89,26 @@ def generate_playlist():
                     logo = ch.get("logo", "")
                     stream_url = ch.get("live_link", "") # Mengambil live_link .m3u8
                     
-                    # Ambil kategori pertama jika ada
-                    categories = ch.get("categories", [])
-                    group = categories[0].get("category_name", "Sports") if categories else "Sports"
+                    # 1. Coba ekstrak kategori/genre asli dari URL stream
+                    group = extract_genre_from_url(stream_url)
+                    
+                    # 2. Jika tidak ditemukan di URL, fallback ke data kategori API
+                    if not group:
+                        categories = ch.get("categories", [])
+                        group = categories[0].get("category_name", "Sports") if categories else "Sports"
                     
                     if stream_url:
                         m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
                         m3u_content += f'{stream_url}\n'
                         channel_count += 1
-                        print(iklan := f"Berhasil menambahkan: {name}")
+                        print(f"Berhasil menambahkan: {name} (Kategori: {group})")
         except Exception as e:
             continue
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_content)
         
-    print(f"Playlist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
+    print(f"\nPlaylist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
 
 if __name__ == "__main__":
-    generate_generate = generate_playlist()
+    generate_playlist()
