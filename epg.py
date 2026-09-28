@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime, timedelta
 
 def authenticate_guest():
     """Perform guest authentication to obtain a valid access token."""
@@ -47,10 +48,16 @@ def generate_epg():
     }
 
     added_channels = set()
-    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
+    channels_xml = ""
+    programmes_xml = ""
+
+    now = datetime.utcnow()
+    start_time = (now - timedelta(days=1)).strftime('%Y%m%d%H%M%S +0000')
+    stop_time = (now + timedelta(days=3)).strftime('%Y%m%d%H%M%S +0000')
 
     # 1. Take from the master list
     list_url = "https://api.gizmott.com/api/v1/fastchannel/list"
+    print("Retrieving channel data for the EPG from the master list...")
     try:
         res = requests.get(list_url, headers=headers)
         if res.status_code == 200:
@@ -64,30 +71,40 @@ def generate_epg():
                 if ch_id_str in added_channels:
                     continue
                 
-                name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or f"Channel {ch_id_str}"
+                name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or "Unknown"
                 
+                stream_url = ""
                 detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
-                has_stream = False
                 try:
                     detail_res = requests.get(detail_url, headers=headers)
                     if detail_res.status_code == 200:
                         detail_data = detail_res.json().get("data", [])
-                        if (isinstance(detail_data, list) and detail_data and (detail_data[0].get("live_link") or detail_data[0].get("stream_url"))) or \
-                           (isinstance(detail_data, dict) and (detail_data.get("live_link") or detail_data.get("stream_url"))):
-                            has_stream = True
+                        if isinstance(detail_data, list) and detail_data:
+                            stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
+                        elif isinstance(detail_data, dict):
+                            stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
                 except Exception:
                     pass
 
-                if has_stream:
+                if stream_url:
                     added_channels.add(ch_id_str)
-                    xml_content += f'  <channel id="{ch_id_str}">\n'
-                    xml_content += f'    <display-name lang="en">{name}</display-name>\n'
-                    xml_content += f'  </channel>\n'
+                    
+                    # channel element
+                    channels_xml += f'  <channel id="{ch_id_str}">\n'
+                    channels_xml += f'    <display-name lang="en">{name}</display-name>\n'
+                    channels_xml += f'  </channel>\n'
+                    
+                    # default/live program
+                    programmes_xml += f'  <programme start="{start_time}" stop="{stop_time}" channel="{ch_id_str}">\n'
+                    programmes_xml += f'    <title lang="en">{name} - Live Stream</title>\n'
+                    programmes_xml += f'    <desc lang="en">Enjoy continuous live streaming and broadcasting on {name}.</desc>\n'
+                    programmes_xml += f'  </programme>\n'
     except Exception as e:
         print(f"Error retrieving master list for EPG: {e}")
 
     # 2. Go to the home screen to synchronize backups
     home_url = "https://api.gizmott.com/api/v2/home"
+    print("Checking additional homepage data for EPG...")
     try:
         response = requests.get(home_url, headers=headers)
         if response.status_code == 200:
@@ -103,34 +120,43 @@ def generate_epg():
                     if ch_id_str in added_channels:
                         continue
                     
-                    name = ch.get("show_name", f"Channel {ch_id_str}")
+                    name = ch.get("show_name", "Unknown")
                     
+                    stream_url = ""
                     detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
-                    has_stream = False
                     try:
                         detail_res = requests.get(detail_url, headers=headers)
                         if detail_res.status_code == 200:
-                            detail_data = detail_res.json().get("data", [])
-                            if (isinstance(detail_data, list) and detail_data and (detail_data[0].get("live_link") or detail_data[0].get("stream_url"))) or \
-                               (isinstance(detail_data, dict) and (detail_data.get("live_link") or detail_data.get("stream_url"))):
-                                has_stream = True
+                            detail_json = detail_res.json()
+                            detail_data = detail_json.get("data", [])
+                            if isinstance(detail_data, list) and detail_data:
+                                stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
+                            elif isinstance(detail_data, dict):
+                                stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
                     except Exception:
                         pass
 
-                    if has_stream:
+                    if stream_url:
                         added_channels.add(ch_id_str)
-                        xml_content += f'  <channel id="{ch_id_str}">\n'
-                        xml_content += f'    <display-name lang="en">{name}</display-name>\n'
-                        xml_content += f'  </channel>\n'
+                        
+                        channels_xml += f'  <channel id="{ch_id_str}">\n'
+                        channels_xml += f'    <display-name lang="en">{name}</display-name>\n'
+                        channels_xml += f'  </channel>\n'
+                        
+                        programmes_xml += f'  <programme start="{start_time}" stop="{stop_time}" channel="{ch_id_str}">\n'
+                        programmes_xml += f'    <title lang="en">{name} - Live Stream</title>\n'
+                        programmes_xml += f'    <desc lang="en">Enjoy continuous live streaming and broadcasting on {name}.</desc>\n'
+                        programmes_xml += f'  </programme>\n'
     except Exception as e:
-        print(f"Error retrieving EPG home page: {e}")
+        print(f"Error mengambil data beranda untuk EPG: {e}")
 
-    xml_content += '</tv>'
+    # Combine the entire XML structure
+    full_xml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n' + channels_xml + programmes_xml + '</tv>'
 
     with open("epg.xml", "w", encoding="utf-8") as f:
-        f.write(xml_content)
+        f.write(full_xml)
         
-    print(f"The epg.xml file was successfully generated with {len(added_channels)} synchronized channels!")
+    print(f"\nFile epg.xml berhasil di-generate! Total {len(added_channels)} channel dengan program EPG yang sinkron.")
 
 if __name__ == "__main__":
     generate_epg()
