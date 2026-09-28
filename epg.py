@@ -7,6 +7,8 @@ import html
 import os
 import requests
 
+session = requests.Session()
+
 def authenticate_guest():
     """Perform guest authentication to obtain a valid access token."""
     auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
@@ -23,7 +25,7 @@ def authenticate_guest():
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
     }
     try:
-        response = requests.get(auth_url, headers=headers)
+        response = session.get(auth_url, headers=headers, timeout=15)
         if response.status_code == 200:
             return response.json().get("token")
     except Exception:
@@ -65,7 +67,7 @@ def generate_epg():
     
     print("Retrieving channel name list for EPG...")
     try:
-        list_res = requests.get("https://api.gizmott.com/api/v1/fastchannel/list", headers=headers, timeout=15)
+        list_res = session.get("https://api.gizmott.com/api/v1/fastchannel/list", headers=headers, timeout=15)
         if list_res.status_code == 200:
             for ch in list_res.json().get("data", []):
                 ch_id = str(ch.get("channel_id") or ch.get("id") or "")
@@ -76,7 +78,7 @@ def generate_epg():
         print(f"Warning when retrieving the master list: {e}")
 
     try:
-        home_res = requests.get("https://api.gizmott.com/api/v2/home", headers=headers, timeout=15)
+        home_res = session.get("https://api.gizmott.com/api/v2/home", headers=headers, timeout=15)
         if home_res.status_code == 200:
             for section in home_res.json().get("data", []):
                 for ch in section.get("shows", []):
@@ -90,7 +92,7 @@ def generate_epg():
     # 2. Retrieve the schedule data
     url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
     try:
-        response = requests.get(url, headers=headers, timeout=15)
+        response = session.get(url, headers=headers, timeout=15)
         
         if response.status_code != 200:
             print(f"Failed to retrieve schedule data from the API, status code: {response.status_code}")
