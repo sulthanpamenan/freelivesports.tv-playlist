@@ -1,104 +1,147 @@
-from datetime import datetime
-import html
-import os
 import requests
 
-def generate_epg():
-    url = "https://api.gizmott.com/api/v1/schedule/fastchannelsv2?timezone=Asia%2FJakarta"
-    access_token = os.getenv("GIZMOTT_ACCESS_TOKEN", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwicHViaWQiOiI1MDE4MyIsInVpZCI6Ijc5MzgxMTQiLCJjb3VudHJ5X2NvZGUiOiJJIDIsImRldmljZV90eXBlIjoid2ViIiwiaWF0IjoxNzkwNSExNDE1LCJleHAiOjE3OTgyODc0MTV9.3yF9I5p_Y7m2YZZ-bYQkTxkmzR_uFhCfPwVSALIDDdw")
+def authenticate_guest():
+    """Melakukan autentikasi tamu untuk mendapatkan token akses yang valid."""
+    auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
     headers = {
         "accept": "application/json, text/plain, */*",
-        "access-token": access_token,
+        "channelid": "516",
+        "country_code": "ID",
+        "crossorigin": "true",
+        "dev_id": "5d01d64ac5b0026957052f0330129fc6",
+        "device_type": "web",
+        "ip": "103.150.218.78",
         "pubid": "50183",
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+        "uid": "7938114",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
     }
-
+    
     try:
-        response = requests.get(url, headers=headers, timeout=15)
-        
-        if response.status_code != 200:
-            print(f"Failed to retrieve data from the API, status code: {response.status_code}")
-            return
-
-        res_json = response.json()
-        schedules = res_json.get("data", {}).get("schedules", [])
-
-        if not isinstance(schedules, list):
-            print("The schedule data format from the API is invalid.")
-            return
-
-        channels_map = {}
-        valid_programmes = []
-
-        for item in schedules:
-            if not isinstance(item, dict):
-                continue
-                
-            channel_id = str(item.get("channel_id", "channel"))
-            title = item.get("title", "Live Event")
-            desc = item.get("description", "")
-
-            if not desc or desc.strip().lower() in ["none", "null"]:
-                desc = ""
-
-            start = item.get("start", "")
-            stop = item.get("end", "")
-
-            try:
-                dt_start = datetime.fromisoformat(start.replace("Z", "+00:00"))
-                dt_stop = datetime.fromisoformat(stop.replace("Z", "+00:00"))
-
-                if dt_stop <= dt_start:
-                    continue
-
-                start_fmt = dt_start.strftime("%Y%m%d%H%M%S %z").strip()
-                stop_fmt = dt_stop.strftime("%Y%m%d%H%M%S %z").strip()
-            except Exception:
-                start_fmt = start
-                stop_fmt = stop
-
-            if channel_id not in channels_map:
-                channel_name = (
-                    item.get("channel_name")
-                    or item.get("name")
-                    or f"Channel {channel_id}"
-                )
-                channels_map[channel_id] = channel_name
-
-            valid_programmes.append({
-                "channel": channel_id,
-                "start": start_fmt,
-                "stop": stop_fmt,
-                "title": html.escape(str(title)),
-                "desc": html.escape(str(desc)),
-            })
-
-        with open("epg.xml", "w", encoding="utf-8") as f:
-            f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-            f.write("<tv>\n")
-
-            for ch_id, ch_name in channels_map.items():
-                f.write(f'  <channel id="{ch_id}">\n')
-                f.write(f'    <display-name lang="en">{html.escape(ch_name)}</display-name>\n')
-                f.write('  </channel>\n')
-
-            for prog in valid_programmes:
-                f.write(f'  <programme start="{prog["start"]}" stop="{prog["stop"]}" channel="{prog["channel"]}">\n')
-                f.write(f'    <title lang="en">{prog["title"]}</title>\n')
-                if prog["desc"]:
-                    f.write(f'    <desc lang="en">{prog["desc"]}</desc>\n')
-                f.write('  </programme>\n')
-
-            f.write("</tv>\n")
-
-        print("EPG XMLTV file successfully created!")
-
-    except requests.exceptions.Timeout:
-        print("Error: Connection to the Gizmott API timed out.")
-    except requests.exceptions.RequestException as e:
-        print(f"A network error occurred: {e}")
+        response = requests.get(auth_url, headers=headers)
+        if response.status_code == 200:
+            data = response.json()
+            token = data.get("token")
+            print("Autentikasi berhasil!")
+            return token
     except Exception as e:
-        print(f"An error occurred while processing the EPG: {e}")
+        print(f"Error saat autentikasi: {e}")
+    return None
+
+def generate_playlist():
+    token = authenticate_guest()
+    if not token:
+        print("Tidak dapat melanjutkan pembuatan playlist karena token gagal didapatkan.")
+        return
+
+    headers = {
+        "accept": "application/json, text/plain, */*",
+        "access-token": token,
+        "pubid": "50183",
+        "channelid": "516",
+        "country_code": "ID",
+        "crossorigin": "true",
+        "dev_id": "5d01d64ac5b0026957052f0330129fc6",
+        "device_type": "web",
+        "uid": "7938114",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+    }
+    
+    m3u_content = "#EXTM3U\n"
+    added_channels = set()
+    channel_count = 0
+
+    # 1. Ambil dari endpoint master fastchannel list yang baru ditemukan
+    list_url = "https://api.gizmott.com/api/v1/fastchannel/list"
+    print("Mengambil data dari endpoint master fastchannel list...")
+    try:
+        res = requests.get(list_url, headers=headers)
+        if res.status_code == 200:
+            channels_data = res.json().get("data", [])
+            for ch in channels_data:
+                ch_id = ch.get("channel_id") or ch.get("id")
+                if not ch_id:
+                    continue
+                
+                ch_id_str = str(ch_id)
+                if ch_id_str in added_channels:
+                    continue
+                
+                name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or "Unknown"
+                logo = ch.get("logo_thumb", "") or ch.get("hero_image", "") or ch.get("logo", "")
+                group_name = ch.get("category_name", "Live Sports")
+                
+                # Ambil stream URL via detail endpoint
+                stream_url = ""
+                detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
+                try:
+                    detail_res = requests.get(detail_url, headers=headers)
+                    if detail_res.status_code == 200:
+                        detail_data = detail_res.json().get("data", [])
+                        if isinstance(detail_data, list) and detail_data:
+                            stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
+                        elif isinstance(detail_data, dict):
+                            stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
+                except Exception:
+                    pass
+
+                if stream_url:
+                    added_channels.add(ch_id_str)
+                    m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
+                    m3u_content += f'{stream_url}\n'
+                    channel_count += 1
+                    print(f"Berhasil menambahkan (Master List): {name}")
+    except Exception as e:
+        print(f"Error mengambil master list: {e}")
+
+    # 2. Fallback / Cadangan: Ambil juga dari endpoint beranda (/api/v2/home) untuk mencakup channel tambahan jika ada yang terlewat
+    home_url = "https://api.gizmott.com/api/v2/home"
+    print("\nMemeriksa tambahan data dari beranda utama...")
+    try:
+        response = requests.get(home_url, headers=headers)
+        if response.status_code == 200:
+            sections = response.json().get("data", [])
+            for section in sections:
+                group_name = section.get("category_name", "Sports")
+                shows = section.get("shows", [])
+                for ch in shows:
+                    ch_id = ch.get("channel_id")
+                    if not ch_id:
+                        continue
+                    
+                    ch_id_str = str(ch_id)
+                    if ch_id_str in added_channels:
+                        continue
+                    
+                    name = ch.get("show_name", "Unknown")
+                    logo = ch.get("logo_thumb", "") or ch.get("hero_image", "")
+                    
+                    stream_url = ""
+                    detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
+                    try:
+                        detail_res = requests.get(detail_url, headers=headers)
+                        if detail_res.status_code == 200:
+                            detail_data = detail_res.json().get("data", [])
+                            if isinstance(detail_data, list) and detail_data:
+                                stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
+                            elif isinstance(detail_data, dict):
+                                stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
+                    except Exception:
+                        pass
+
+                    if stream_url:
+                        added_channels.add(ch_id_str)
+                        m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
+                        m3u_content += f'{stream_url}\n'
+                        channel_count += 1
+                        print(f"Berhasil menambahkan (Beranda): {name} (Kategori: {group_name})")
+    except Exception as e:
+        print(f"Error mengambil data beranda: {e}")
+
+    # Simpan ke file M3U
+    with open("playlist.m3u", "w", encoding="utf-8") as f:
+        f.write(m3u_content)
+        
+    print(f"\nPlaylist final berhasil di-generate! Total {channel_count} channel unik dimasukkan ke playlist.m3u")
 
 if __name__ == "__main__":
-    generate_epg()
+    generate_playlist()
