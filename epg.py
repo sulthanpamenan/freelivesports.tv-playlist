@@ -1,4 +1,8 @@
 from datetime import datetime
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    ZoneInfo = None
 import html
 import os
 import requests
@@ -25,6 +29,27 @@ def authenticate_guest():
     except Exception:
         pass
     return None
+
+def parse_time_to_xmltv(time_str):
+    """Parses ISO time string and converts it to Asia/Jakarta timezone format for XMLTV."""
+    if not time_str:
+        return ""
+    try:
+        clean_str = time_str.strip().replace("Z", "+00:00")
+        dt = datetime.fromisoformat(clean_str)
+        
+        if dt.tzinfo is None:
+            if ZoneInfo:
+                dt = dt.replace(tzinfo=ZoneInfo("UTC"))
+            else:
+                dt = dt.replace(tzinfo=None)
+        
+        if ZoneInfo:
+            dt = dt.astimezone(ZoneInfo("Asia/Jakarta"))
+            
+        return dt.strftime("%Y%m%d%H%M%S %z").strip()
+    except Exception:
+        return time_str
 
 def generate_epg():
     token = os.getenv("GIZMOTT_ACCESS_TOKEN") or authenticate_guest()
@@ -121,28 +146,19 @@ def generate_epg():
                     desc = ""
 
                 start = item.get("start", "")
-                stop = item.get("end", "")
+                stop = item.get("end", "") or item.get("stop", "")
 
-                try:
-                    dt_start = datetime.fromisoformat(start.replace("Z", "+00:00"))
-                    dt_stop = datetime.fromisoformat(stop.replace("Z", "+00:00"))
+                start_fmt = parse_time_to_xmltv(start)
+                stop_fmt = parse_time_to_xmltv(stop)
 
-                    if dt_stop <= dt_start:
-                        continue
-
-                    start_fmt = dt_start.strftime("%Y%m%d%H%M%S %z").strip()
-                    stop_fmt = dt_stop.strftime("%Y%m%d%H%M%S %z").strip()
-                except Exception:
-                    start_fmt = start
-                    stop_fmt = stop
-
-                valid_programmes.append({
-                    "channel": channel_id,
-                    "start": start_fmt,
-                    "stop": stop_fmt,
-                    "title": html.escape(str(title)),
-                    "desc": html.escape(str(desc)),
-                })
+                if start_fmt and stop_fmt:
+                    valid_programmes.append({
+                        "channel": channel_id,
+                        "start": start_fmt,
+                        "stop": stop_fmt,
+                        "title": html.escape(str(title)),
+                        "desc": html.escape(str(desc)),
+                    })
 
         # 3. Write the epg.xml file
         with open("epg.xml", "w", encoding="utf-8") as f:
