@@ -52,9 +52,8 @@ def generate_playlist():
     m3u_content = "#EXTM3U\n"
     channel_count = 0
     
-    # Anda bisa memperluas rentang angka di sini jika masih ada ID channel di luar 1995-2025
     print("Mengambil data channel...")
-    for ch_id in range(1990, 2040):
+    for ch_id in range(1940, 2050):
         detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
         try:
             response = requests.get(detail_url, headers=headers)
@@ -68,16 +67,19 @@ def generate_playlist():
                     logo = ch.get("logo", "")
                     stream_url = ch.get("live_link", "")
                     
-                    # Menyeragamkan group-title menjadi "Sports" serta menyertakan tvg-id & tvg-name untuk EPG
-                    group = "Sports"
-                    tvg_id = str(ch.get("channel_id", name))
+                    # Mengambil kategori asli channel secara otomatis
+                    categories = ch.get("categories", [])
+                    group = categories[0].get("category_name", "General") if categories else "General"
+                    
+                    # Atribut EPG tvg-id dan tvg-name
+                    tvg_id = str(ch.get("channel_id", ch_id))
                     tvg_name = name
                     
                     if stream_url:
                         m3u_content += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group}",{name}\n'
                         m3u_content += f'{stream_url}\n'
                         channel_count += 1
-                        print(f"Berhasil menambahkan: {name}")
+                        print(f"Berhasil menambahkan: {name} [{group}]")
         except Exception as e:
             continue
 
