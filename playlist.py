@@ -90,7 +90,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
 
     valid_channels = []
 
-    # 1. Fetch from the master endpoint
+    # 1. Take from the master list
     list_url = "https://api.gizmott.com/api/v1/fastchannel/list"
     print("Fetching data from the master fastchannel list endpoint...")
     try:
@@ -137,7 +137,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
     except Exception as e:
         print(f"Error retrieving master list: {e}")
 
-    # 2. Fetch from home endpoint as backup/additional
+    # 2. Go to the home screen to synchronize backups
     home_url = "https://api.gizmott.com/api/v2/home"
     print("\nCheck additional data from the main homepage...")
     try:
