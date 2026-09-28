@@ -16,8 +16,7 @@ Import these links directly into your preferred IPTV player (TiviMate, OTT Navig
 
 | Content | URL | Description |
 | :--- | :--- | :--- |
-| **Playlist (TXT)** *(Recommended)* | `https://sulthanpamenan.github.io/freelivesports.tv-playlist/playlist.txt` | Standard playlist format with official playback parameters |
-| **Playlist (M3U)** | `https://sulthanpamenan.github.io/freelivesports.tv-playlist/playlist.m3u` | Direct `.m3u` extension format for player compatibility |
+| **Playlist (M3U)** *(Recommended)* | `https://sulthanpamenan.github.io/freelivesports.tv-playlist/playlist.m3u` | Standard playlist format with official playback parameters |
 | **EPG (XMLTV)** | `https://sulthanpamenan.github.io/freelivesports.tv-playlist/epg.xml` | Electronic Program Guide containing complete show schedules |
 
 ---
