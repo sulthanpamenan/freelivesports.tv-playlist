@@ -52,10 +52,9 @@ def generate_playlist():
     m3u_content = "#EXTM3U\n"
     channel_count = 0
     
-    # Contoh melakukan iterasi pada ID channel (misalnya rentang ID dari 1990 sampai 2025 atau sesuai ID channel Anda)
-    # Anda bisa menyesuaikan daftar ID channel aktif di sini
+    # Anda bisa memperluas rentang angka di sini jika masih ada ID channel di luar 1995-2025
     print("Mengambil data channel...")
-    for ch_id in range(1995, 2025):
+    for ch_id in range(1990, 2040):
         detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
         try:
             response = requests.get(detail_url, headers=headers)
@@ -67,17 +66,18 @@ def generate_playlist():
                     ch = data_list[0]
                     name = ch.get("channel_name", "Unknown")
                     logo = ch.get("logo", "")
-                    stream_url = ch.get("live_link", "") # Mengambil live_link .m3u8
+                    stream_url = ch.get("live_link", "")
                     
-                    # Ambil kategori pertama jika ada
-                    categories = ch.get("categories", [])
-                    group = categories[0].get("category_name", "Sports") if categories else "Sports"
+                    # Menyeragamkan group-title menjadi "Sports" serta menyertakan tvg-id & tvg-name untuk EPG
+                    group = "Sports"
+                    tvg_id = str(ch.get("channel_id", name))
+                    tvg_name = name
                     
                     if stream_url:
-                        m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
+                        m3u_content += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group}",{name}\n'
                         m3u_content += f'{stream_url}\n'
                         channel_count += 1
-                        print(iklan := f"Berhasil menambahkan: {name}")
+                        print(f"Berhasil menambahkan: {name}")
         except Exception as e:
             continue
 
@@ -87,4 +87,4 @@ def generate_playlist():
     print(f"Playlist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
 
 if __name__ == "__main__":
-    generate_generate = generate_playlist()
+    generate_playlist()
