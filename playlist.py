@@ -1,6 +1,4 @@
 import requests
-import re
-from urllib.parse import parse_qs, urlparse
 
 def authenticate_guest():
     """Melakukan autentikasi tamu untuk mendapatkan token akses yang valid."""
@@ -32,26 +30,6 @@ def authenticate_guest():
         print(f"Error saat autentikasi: {e}")
         return None
 
-def extract_genre_from_url(url):
-    """Mengekstrak genre dari parameter URL stream jika tersedia."""
-    try:
-        parsed_url = urlparse(url)
-        query_params = parse_qs(parsed_url.query)
-        
-        # Cek berbagai kemungkinan nama parameter genre di URL
-        for key in ["content_genre", "ads.content_genre", "genre"]:
-            if key in query_params and query_params[key]:
-                genres = query_params[key][0].split(",")
-                if genres and genres[0]:
-                    # Ambil genre pertama yang lebih spesifik (selain kata 'Sport' umum)
-                    for g in genres:
-                        if g.lower() not in ["sport", "sports"]:
-                            return g.strip()
-                    return genres[0].strip()
-    except Exception:
-        pass
-    return None
-
 def generate_playlist():
     token = authenticate_guest()
     if not token:
@@ -72,115 +50,41 @@ def generate_playlist():
     }
     
     m3u_content = "#EXTM3U\n"
-    added_channels = set()
     channel_count = 0
-
-    # 1. Ambil dari endpoint master fastchannel list
-    list_url = "https://api.gizmott.com/api/v1/fastchannel/list"
-    print("Mengambil data dari endpoint master fastchannel list...")
-    try:
-        res = requests.get(list_url, headers=headers)
-        if res.status_code == 200:
-            channels_data = res.json().get("data", [])
-            for ch in channels_data:
-                ch_id = ch.get("channel_id") or ch.get("id")
-                if not ch_id:
-                    continue
+    
+    # Contoh melakukan iterasi pada ID channel (misalnya rentang ID dari 1990 sampai 2025 atau sesuai ID channel Anda)
+    # Anda bisa menyesuaikan daftar ID channel aktif di sini
+    print("Mengambil data channel...")
+    for ch_id in range(1995, 2025):
+        detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id}"
+        try:
+            response = requests.get(detail_url, headers=headers)
+            if response.status_code == 200:
+                res_data = response.json()
+                data_list = res_data.get("data", [])
                 
-                ch_id_str = str(ch_id)
-                if ch_id_str in added_channels:
-                    continue
-                
-                name = ch.get("show_name") or ch.get("channel_name") or ch.get("name") or "Unknown"
-                logo = ch.get("logo_thumb", "") or ch.get("hero_image", "") or ch.get("logo", "")
-                
-                stream_url = ""
-                detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
-                try:
-                    detail_res = requests.get(detail_url, headers=headers)
-                    if detail_res.status_code == 200:
-                        detail_data = detail_res.json().get("data", [])
-                        if isinstance(detail_data, list) and detail_data:
-                            item_detail = detail_data[0]
-                            stream_url = item_detail.get("live_link", "") or item_detail.get("stream_url", "")
-                        elif isinstance(detail_data, dict):
-                            stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
-                except Exception:
-                    pass
-
-                if stream_url:
-                    added_channels.add(ch_id_str)
+                if data_list and isinstance(data_list, list):
+                    ch = data_list[0]
+                    name = ch.get("channel_name", "Unknown")
+                    logo = ch.get("logo", "")
+                    stream_url = ch.get("live_link", "") # Mengambil live_link .m3u8
                     
-                    # Tentukan kategori (prioritaskan ekstrak dari URL stream, fallback ke master data)
-                    group_name = extract_genre_from_url(stream_url)
-                    if not group_name:
-                        group_name = ch.get("category_name") or ch.get("genre") or "Live Sports"
+                    # Ambil kategori pertama jika ada
+                    categories = ch.get("categories", [])
+                    group = categories[0].get("category_name", "Sports") if categories else "Sports"
                     
-                    m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
-                    m3u_content += f'{stream_url}\n'
-                    channel_count += 1
-                    print(f"Berhasil menambahkan (Master): {name} (Kategori: {group_name})")
-    except Exception as e:
-        print(f"Error mengambil master list: {e}")
-        
-    # 2. Ambil dari endpoint beranda sebagai cadangan/tambahan
-    home_url = "https://api.gizmott.com/api/v2/home"
-    print("\nMemeriksa tambahan data dari beranda utama...")
-    try:
-        response = requests.get(home_url, headers=headers)
-        if response.status_code == 200:
-            res_json = response.json()
-            sections = res_json.get("data", [])
-            
-            for section in sections:
-                default_section_group = section.get("category_name", "Sports")
-                shows = section.get("shows", [])
-                
-                for ch in shows:
-                    ch_id = ch.get("channel_id")
-                    if not ch_id:
-                        continue
-                    
-                    ch_id_str = str(ch_id)
-                    if ch_id_str in added_channels:
-                        continue
-                    
-                    name = ch.get("show_name", "Unknown")
-                    logo = ch.get("logo_thumb", "") or ch.get("hero_image", "")
-                    
-                    stream_url = ""
-                    detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
-                    try:
-                        detail_res = requests.get(detail_url, headers=headers)
-                        if detail_res.status_code == 200:
-                            detail_json = detail_res.json()
-                            detail_data = detail_json.get("data", [])
-                            if isinstance(detail_data, list) and detail_data:
-                                stream_url = detail_data[0].get("live_link", "") or detail_data[0].get("stream_url", "")
-                            elif isinstance(detail_data, dict):
-                                stream_url = detail_data.get("live_link", "") or detail_data.get("stream_url", "")
-                    except Exception:
-                        pass
-
                     if stream_url:
-                        added_channels.add(ch_id_str)
-                        
-                        group_name = extract_genre_from_url(stream_url)
-                        if not group_name:
-                            group_name = default_section_group
-                            
-                        m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
+                        m3u_content += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{name}\n'
                         m3u_content += f'{stream_url}\n'
                         channel_count += 1
-                        print(f"Berhasil menambahkan (Beranda): {name} (Kategori: {group_name})")
-    except Exception as e:
-        print(f"Terjadi kesalahan saat mengambil data beranda: {e}")
+                        print(iklan := f"Berhasil menambahkan: {name}")
+        except Exception as e:
+            continue
 
-    # Simpan hasil akhir gabungan ke file M3U
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_content)
         
-    print(f"\nPlaylist berhasil di-generate! Total {channel_count} channel unik dimasukkan ke playlist.m3u")
+    print(f"Playlist berhasil di-generate! Total {channel_count} channel dimasukkan ke playlist.m3u")
 
 if __name__ == "__main__":
-    generate_playlist()
+    generate_generate = generate_playlist()
