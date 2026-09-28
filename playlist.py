@@ -1,6 +1,8 @@
 import requests
 from urllib.parse import parse_qs, urlparse
 
+session = requests.Session()
+
 def authenticate_guest():
     """Perform guest authentication to obtain a valid access token."""
     auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
@@ -18,7 +20,7 @@ def authenticate_guest():
     }
     
     try:
-        response = requests.get(auth_url, headers=headers)
+        response = session.get(auth_url, headers=headers, timeout=15)
         if response.status_code == 200:
             data = response.json()
             token = data.get("token")
@@ -87,14 +89,13 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
 
     added_channels = set()
     channel_count = 0
-
     valid_channels = []
 
     # 1. Take from the master list
     list_url = "https://api.gizmott.com/api/v1/fastchannel/list"
     print("Fetching data from the master fastchannel list endpoint...")
     try:
-        res = requests.get(list_url, headers=headers)
+        res = session.get(list_url, headers=headers, timeout=15)
         if res.status_code == 200:
             channels_data = res.json().get("data", [])
             for ch in channels_data:
@@ -112,7 +113,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                 stream_url = ""
                 detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
                 try:
-                    detail_res = requests.get(detail_url, headers=headers)
+                    detail_res = session.get(detail_url, headers=headers, timeout=15)
                     if detail_res.status_code == 200:
                         detail_data = detail_res.json().get("data", [])
                         if isinstance(detail_data, list) and detail_data:
@@ -141,7 +142,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
     home_url = "https://api.gizmott.com/api/v2/home"
     print("\nCheck additional data from the main homepage...")
     try:
-        response = requests.get(home_url, headers=headers)
+        response = session.get(home_url, headers=headers, timeout=15)
         if response.status_code == 200:
             res_json = response.json()
             sections = res_json.get("data", [])
@@ -165,7 +166,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                     stream_url = ""
                     detail_url = f"https://api.gizmott.com/api/v1/fastchannel/details/{ch_id_str}"
                     try:
-                        detail_res = requests.get(detail_url, headers=headers)
+                        detail_res = session.get(detail_url, headers=headers, timeout=15)
                         if detail_res.status_code == 200:
                             detail_json = detail_res.json()
                             detail_data = detail_json.get("data", [])
