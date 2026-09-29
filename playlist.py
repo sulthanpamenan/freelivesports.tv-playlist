@@ -57,7 +57,7 @@ def extract_genre_from_url(url):
 def format_group_name(raw_group):
     if not raw_group:
         return "Sports"
-    if raw_group.strip().lower() == "live sports":
+    if raw_group.strip().lower() == "live channels":
         return "Live Sports"
     return "Sports"
 
