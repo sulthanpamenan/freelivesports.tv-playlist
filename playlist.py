@@ -49,11 +49,10 @@ def extract_genre_from_url(url):
         pass
     return None
 
-def format_group_name(raw_group):
-    if not raw_group:
-        return "Sports"
+def format_group_name(raw_group, channel_name=""):
+    text_to_check = f"{raw_group or ''} {channel_name}".strip().lower()
     
-    if "live sports" in raw_group.strip().lower():
+    if "live sports" in text_to_check:
         return "Live Sports"
         
     return "Sports"
@@ -144,7 +143,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                     if not raw_group:
                         raw_group = ch.get("category_name") or ch.get("genre") or "Sports"
                     
-                    group_name = format_group_name(raw_group)
+                    group_name = format_group_name(raw_group, name)
                     
                     valid_channels.append({"id": ch_id_str, "name": name})
                     m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
@@ -208,7 +207,7 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                         if not raw_group:
                             raw_group = default_section_group
                         
-                        group_name = format_group_name(raw_group)
+                        group_name = format_group_name(raw_group, name)
                         
                         valid_channels.append({"id": ch_id_str, "name": name})
                         m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
