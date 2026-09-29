@@ -41,15 +41,10 @@ def extract_genre_from_url(url):
         parsed_url = urlparse(url)
         query_params = parse_qs(parsed_url.query)
         
-        for key in ["content_genre", "ads.content_genre", "genre"]:
+        for key in ["content_genre", "ads.content_genre", "genre", "content_cat"]:
             if key in query_params and query_params[key]:
-                genres = query_params[key][0].split(",")
-                if genres and genres[0]:
-                    for g in genres:
-                        clean_g = g.strip()
-                        if clean_g.lower() not in ["sport", "sports"]:
-                            return clean_g
-                    return genres[0].strip()
+                val = query_params[key][0]
+                return val
     except Exception:
         pass
     return None
@@ -57,8 +52,10 @@ def extract_genre_from_url(url):
 def format_group_name(raw_group):
     if not raw_group:
         return "Sports"
-    if raw_group.strip().lower() == "live-channels":
+    
+    if "live sports" in raw_group.strip().lower():
         return "Live Sports"
+        
     return "Sports"
 
 def generate_playlist():
