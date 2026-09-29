@@ -10,7 +10,6 @@ import requests
 session = requests.Session()
 
 def authenticate_guest():
-    """Perform guest authentication to obtain a valid access token."""
     auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
     headers = {
         "accept": "application/json, text/plain, */*",
@@ -33,7 +32,6 @@ def authenticate_guest():
     return None
 
 def parse_time_to_xmltv(time_str):
-    """Parses ISO time string from API (already in Asia/Jakarta local time) and formats for XMLTV."""
     if not time_str:
         return ""
     try:
