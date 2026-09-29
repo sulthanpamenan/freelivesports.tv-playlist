@@ -4,11 +4,10 @@ from urllib.parse import parse_qs, urlparse
 session = requests.Session()
 
 # --- CHANNEL EXCLUSIONS (BLACKLIST) ---
-EXCLUDED_IDS = {""}
-EXCLUDED_NAMES = {""}
+EXCLUDED_IDS = {"Select"}
+EXCLUDED_NAMES = {"Select"}
 
 def authenticate_guest():
-    """Perform guest authentication to obtain a valid access token."""
     auth_url = "https://api.gizmott.com/api/v1/account/authenticate"
     headers = {
         "accept": "application/json, text/plain, */*",
@@ -38,7 +37,6 @@ def authenticate_guest():
         return None
 
 def extract_genre_from_url(url):
-    """Extracts the genre from the stream URL parameter (.m3u8) if available."""
     try:
         parsed_url = urlparse(url)
         query_params = parse_qs(parsed_url.query)
@@ -55,6 +53,13 @@ def extract_genre_from_url(url):
     except Exception:
         pass
     return None
+
+def format_group_name(raw_group):
+    if not raw_group:
+        return "Sports"
+    if raw_group.strip().lower() == "live sports":
+        return "Live Sports"
+    return "Sports"
 
 def generate_playlist():
     token = authenticate_guest()
@@ -138,9 +143,11 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                 if stream_url:
                     added_channels.add(ch_id_str)
                     
-                    group_name = extract_genre_from_url(stream_url)
-                    if not group_name:
-                        group_name = ch.get("category_name") or ch.get("genre") or "Live Sports"
+                    raw_group = extract_genre_from_url(stream_url)
+                    if not raw_group:
+                        raw_group = ch.get("category_name") or ch.get("genre") or "Sports"
+                    
+                    group_name = format_group_name(raw_group)
                     
                     valid_channels.append({"id": ch_id_str, "name": name})
                     m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
@@ -200,9 +207,11 @@ window.location.replace("https://sulthanpamenan.github.io/freelivesports.tv-play
                     if stream_url:
                         added_channels.add(ch_id_str)
                         
-                        group_name = extract_genre_from_url(stream_url)
-                        if not group_name:
-                            group_name = default_section_group
+                        raw_group = extract_genre_from_url(stream_url)
+                        if not raw_group:
+                            raw_group = default_section_group
+                        
+                        group_name = format_group_name(raw_group)
                         
                         valid_channels.append({"id": ch_id_str, "name": name})
                         m3u_content += f'#EXTINF:-1 tvg-id="{ch_id_str}" tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name}",{name}\n'
